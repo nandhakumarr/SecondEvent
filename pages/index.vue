@@ -1,15 +1,42 @@
 <template lang="pug">
 .page
   hero
+  about
+  speakers
+  spilt-section
+  agenda
+  tickets
+  blog
+  sponsors
+  venue
+  app-footer
 </template>
 
 
 <script>
-import Hero from '~/components/Hero.vue'
+import Hero from '~/components/sections/Hero.vue'
+import About from '~/components/sections/About.vue'
+import Speakers from '~/components/sections/Speakers.vue'
+import SpiltSection from '~/components/sections/SpiltSection.vue'
+import Agenda from '~/components/sections/Agenda.vue'
+import Tickets from '~/components/sections/Tickets.vue'
+import Blog from '~/components/sections/Blog.vue'
+import Sponsors from '~/components/sections/Sponsors.vue'
+import Venue from '~/components/sections/Venue.vue'
+import AppFooter from '~/components/sections/AppFooter.vue'
 
 export default {
   components: {
-    Hero
+    Hero,
+    About,
+    Speakers,
+    SpiltSection,
+    Agenda,
+    Tickets,
+    Blog,
+    Sponsors,
+    Venue,
+    AppFooter
   }
 }
 </script>
