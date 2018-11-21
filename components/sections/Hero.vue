@@ -1,11 +1,16 @@
 <template lang="pug">
 section.hero
   .container
+    app-header
 
 </template>
 
 <script>
+import AppHeader from '~/components/sections/AppHeader.vue'
 export default {
+  components: {
+    AppHeader
+  }
 
 }
 </script>

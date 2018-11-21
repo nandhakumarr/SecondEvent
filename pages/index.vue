@@ -14,6 +14,7 @@
 
 
 <script>
+
 import Hero from '~/components/sections/Hero.vue'
 import About from '~/components/sections/About.vue'
 import Speakers from '~/components/sections/Speakers.vue'
