@@ -66,7 +66,7 @@ section.app-footer
   .container
     .newsletter
       background-image: url(/images/subscribe-pattern.png)
-      background-image: url(/images/subscribe-slice-left.png) repeat
+      background-image: url(/images/subscribe-slice-left.png) reap
       background-color: #3b1d82
       margin: 0 auto
       padding: $space*2
