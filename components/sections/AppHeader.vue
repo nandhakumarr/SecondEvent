@@ -1,7 +1,5 @@
 <template lang="pug">
 section.app-header(:class="{dark: isScroll}")
-  .container
-section.app-header
   .container(:class="{open: open}")
     a.logo
       img(src="/images/logo.png")
