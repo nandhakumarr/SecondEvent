@@ -10,6 +10,8 @@
   sponsors
   venue
   app-footer
+  .back-to
+    a(href="#", v-scroll-to="'.hero'")
 </template>
 
 
@@ -53,6 +55,21 @@ export default {
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+}
+.back-to {
+  background: #e7015e none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 35px;
+    color: #979797;
+    cursor: pointer;
+    height: 44px;
+    position: fixed;
+    right: 14px;
+    text-align: center;
+    width: 44px;
+    z-index: 9;
+    display: block;
+    padding: 8px 0;
 }
 
 
