@@ -13,7 +13,7 @@ section.blog
           span {{ blog.date }}
         .card-title
           h2 {{ blog.title }}
-          p {{ blog.details }}
+          p {{ blog.deta   
         .readmore  
           a(href="#") Read More  
           img(src="/images/right-arrow.png")
