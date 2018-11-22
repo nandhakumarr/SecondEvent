@@ -1,23 +1,34 @@
 @mixin btn($bg, $fg, $border)
   background: $bg
   color: $fg
-  border: 3px solid $border
-  font-weight: bold
-  border-radius: 12px
+  border: 1px solid transparent
+  font-weight: 700
+  border-radius: 3px
   text-decoration: none
-  padding: $space*1 $space*2.5
-  font-size: 1.25rem
+  font-size: 1rem
   cursor: pointer
-  line-height: 1.625rem
+  line-height: 3.4rem
   letter-spacing: 1px
+  display: inline-block
+  text-transform: uppercase
+  height: 55px
+  box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15)
   > *
     color: inherit !important
 
 
 .btn
   @include btn($action-bg, $action-fg, $action-border)
-  padding: $space*1.5 $space*5
-
+  padding: 0 $space*3.4
+  &:hover
+    color: $action-hover-fg
+    background: $action-hover-bg
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15)
 
 .btn.btn-primary
   @include btn($primary-action-bg, $primary-action-fg, $primary-action-border)
+  padding: 0 $space*1.5
+  &:hover
+    background: $primary-action-hover-bg
+    color: $primary-action-hover-fg
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15)

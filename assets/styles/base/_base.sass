@@ -20,7 +20,13 @@ body
       max-width: $page-width
       overflow: hidden
       margin: 0 auto
-      padding: $space*2 0
+      padding: $space*2 0 0
+      @media (max-width: $breakpoint-tab-1)
+        width: 100%
+        padding-right: $space
+        padding-left: $space
+        margin-right: auto
+        margin-left: auto
 
 
 ul
