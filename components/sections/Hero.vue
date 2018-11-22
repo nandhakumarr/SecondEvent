@@ -1,7 +1,7 @@
 <template lang="pug">
 section.hero
+  app-header
   .container
-    app-header
     .banner-content
       p 5 to 7 June 2019, Waterfront Hotel, London
       h1 Digital Thinkers MeetUp
@@ -31,7 +31,7 @@ section.hero
   background-position: center center
   // min-height: 75vh
   color: $white
-  padding-top: $space*12
+  padding-top: $space*7
   .container
     @include spread
     .banner-content

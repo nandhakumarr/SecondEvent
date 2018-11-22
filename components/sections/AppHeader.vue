@@ -1,16 +1,16 @@
 <template lang="pug">
-section.app-header
+section.app-header(:class="{dark: isScroll}")
   .container
     a.logo
       img(src="/images/logo.png")
     nav.navigation
       .primary
-        a(href="#", v-scroll-to="'.hero'") HOME
-        a(href="#", v-scroll-to="'.about'") ABOUT
-        a(href="#", v-scroll-to="'.speakers'") SPEAKERs
-        a(href="#", v-scroll-to="'.schedule'") SCHEDULE
-        a(href="#", v-scroll-to="'.blog'") BLOG
-        a(href="#", v-scroll-to="'.app-footer'") CONTACT
+        a(href="#", v-scroll-to="'.hero'") home
+        a(href="#", v-scroll-to="'.about'") about
+        a(href="#", v-scroll-to="'.speakers'") speakers
+        a(href="#", v-scroll-to="'.schedule'") schedule
+        a(href="#", v-scroll-to="'.blog'") blog
+        a(href="#", v-scroll-to="'.app-footer'") contact
         a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
 
 </template>
@@ -36,7 +36,7 @@ export default {
   },
    methods: {
     handleScroll () {
-      this.isScroll = window.scrollY >= 60
+      this.isScroll = window.scrollY >= 100
     },
     toggle(){
       this.open = !this.open
@@ -57,16 +57,25 @@ export default {
 section
   .container
     @include fixed-n
+    top: $space*-1.2
     @include flex
     background: transparent
     .navigation
       a
         margin: $space
-        text-decoration: none
-      ::after
-        content: '\f107'
-        
-      
+      a.btn.btn-primary
+        font-size: 0.9rem
+      // ::after
+      //   content: '\f107'
 
+
+.app-header.dark
+  background: rgba(26, 24, 49, 0.95)
+  z-index: 99
+  transition: background-color 0.35s
+  @include fixed-n
+  width: 100%
+  height: auto
+  padding: $space*2.7 0
 </style>
 
