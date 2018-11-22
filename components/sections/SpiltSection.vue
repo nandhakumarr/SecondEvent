@@ -32,7 +32,9 @@ section.spilt-section
     background: $event-lightblue
     &:before
       content: ''
-      background: url(/images/cta-bg.png) no-repeat cover
+      background-image: url(/images/cta-bg.png)
+      backgroun-repeat: no-repeat
+      background-size: cover
       width: 100%
       height: 100%
       @include absolute
@@ -42,9 +44,10 @@ section.spilt-section
       @include absolute
       width: 100%
       height: 100%
+      opacity: 0.35
     .cta
       max-width: 36rem
-      padding: $space*7 $space*5
+      padding: $space*5 $space*6
       z-index: 1
       position: relative
       h2, span, p

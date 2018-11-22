@@ -59,11 +59,11 @@ section.speakers
           position: relative
           margin: auto auto 1.2rem
           overflow: hidden
+          &:hover
+            transform: scale(1)
+            transition: all 0.4s ease
           img
             width: 100%
-            &:hover
-              transform: scale(1)
-              transition: all 0.4s ease
         .speaker-info
           p
             color: $neutral-light

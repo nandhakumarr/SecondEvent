@@ -32,7 +32,7 @@ export default [
         tag_name: "@ Rebecca Henrikon ",
         content:
           "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform",
-        
+
       },
       {
         start_time: "3:00PM",
@@ -40,8 +40,8 @@ export default [
         event: "Workshop",
         title: "Lunch Break",
         tag_name: "@ Agaton Johnsson ",
-        
-        
+        class: 'lunch'
+
       },
       {
         start_time: "3:00PM",
@@ -88,7 +88,7 @@ export default [
         tag_name: "@ Rebecca Henrikon ",
         content:
           "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform",
-        
+
       },
       {
         start_time: "3:00PM",
@@ -96,8 +96,8 @@ export default [
         event: "Workshop",
         title: "Lunch Break",
         tag_name: "@ Agaton Johnsson ",
-        content: " ",
-        
+        class: 'lunch'
+
       },
       {
         start_time: "3:00PM",
@@ -144,7 +144,7 @@ export default [
         tag_name: "@ Rebecca Henrikon ",
         content:
           "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform",
-        
+
       },
       {
         start_time: "3:00PM",
@@ -152,8 +152,8 @@ export default [
         event: "Workshop",
         title: "Lunch Break",
         tag_name: "@ Agaton Johnsson ",
-        content: " ",
-        
+        class: 'lunch'
+
       },
       {
         start_time: "3:00PM",
@@ -167,6 +167,6 @@ export default [
       }
     ]
   },
- 
+
 ];
 
