@@ -1,10 +1,10 @@
 <template lang="pug">
 section.speakers
   .container
-    .title
+    header
       span Listen to The
       h2 Event Speakers
-    .row
+    main
       .speakers-list(v-for="(s, i) in data", key="i")
         .speaker-img
           img(:src="s.image")
@@ -33,14 +33,14 @@ section.speakers
   min-height: 100vh
   padding-bottom: $space*4
   .container
-    .title
+    header
       position: relative
       text-align: center
       margin-bottom: $space*7
       span
         color: $neutral-light
         text-transform: uppercase
-    .row
+    main
       position: relative
       text-align: center
       @include flex
