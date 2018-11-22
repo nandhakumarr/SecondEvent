@@ -77,6 +77,7 @@ section.agenda
         width: 20rem
         margin: 0 auto
         @media (max-width: $breakpoint-tab-4)
+          width: 100%
           @include flex
         a
           @include flex-1
@@ -91,9 +92,13 @@ section.agenda
           color: $white
           flex-direction: column
           position: absolute
-        
           @media (max-width: $breakpoint-tab-4)
             position: static
+          @media (max-width: $breakpoint-tab-portrait)
+            position: absolute
+            width: $day-size/1.5
+            height: $day-size/1.5 
+
           &.friday
             background: linear-gradient(110deg, #fc6076 0%, #ff9a44 100%)
             z-index: 3
@@ -122,32 +127,57 @@ section.agenda
     .session
       @include spread
       // border: 1px dotted $neutral-light
+      @media (max-width: $breakpoint-tab-4)
+        border: 1px solid $neutral-light
+        display: block
+        margin-left: auto
+        margin-right: auto
+        height: 20rem
+        width: 30rem
+    
       .time 
         margin-right: 2rem
         width: $space*11
-        background: $event-red
         height: 10rem
+        background: $event-red
         text-align: center
+        @media (max-width: $breakpoint-tab-4)
+          width: 100%
+          height: 7rem
+          padding: 1.5rem
+          margin: 0
+          text-align: left
+          
         h4
-          color: $neutral-light
+          color: $white
           margin-top: $space*3
+          @media (max-width: $breakpoint-tab-4)
+            margin-top: 0
         h6
           font-size: $space*1.25
-          color: $neutral-light
+          color: $white
       .details
         height: $space*10
         flex: 1
         width:  $space*10
         @include flex
+        @media (max-width: $breakpoint-tab-4)
+          display: block
+          width: 100%
+          // text-align: center
         .session-speaker
           margin-right:  $space*3
           img
             width:  $space*5
             height:  $space*5
             border-radius: 50%
+            @media (max-width: $breakpoint-tab-4)
+              display: none
         .session-title
           .data
             @include flex-1
+            // @media (max-width: $breakpoint-tab-4)
+            //   display: block
             h3
               padding: $space
               color: $neutral-light
@@ -158,6 +188,7 @@ section.agenda
             padding: $space
             width: 63%
             color: $neutral-light !important
-      
+            @media (max-width: $breakpoint-tab-4)
+              width: 100%
 </style>
 
