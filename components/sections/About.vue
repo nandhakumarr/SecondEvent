@@ -1,11 +1,31 @@
 <template lang="pug">
 section.about
   .container
+    .intro
+      .text
+        .intro-text(v-for="(a, i) in about.about1", key="i")
+          h3 {{ a.title }}
+          p {{ a.description }}
+          span {{ a.counterNumber }}
+      .video
+        .intro-video
+          img(src="/images/video-img.jpg")
+      .text
+        .intro-text(v-for="(a, j) in about.about2", key="j")
+          h3 {{ a.title }}
+          p {{ a.description }}
+          span {{ a.counterNumber }}
 </template>
 
 <script>
+import data from 'static/seed/about'
 export default {
 
+  data () {
+    return {
+      about: data
+    }
+  }
 
 }
 </script>
@@ -13,6 +33,70 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
 section.about
-  background: $bg-white
+  background-color: $bg-white
+  background-image: url(/images/lines.png)
+  background-repeat: no-repeat
+  background-position: center
+  .container
+    // padding: $space*4
+    .intro
+      @include spread
+      flex-wrap: wrap
+      margin-right: 15px
+      margin-left: 15px
+      // paddin: $space*2
+      .text
+        max-width: 33.33%
+        flex: 1
+        .intro-text
+          background: $white
+          box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.08)
+          border-radius: 5px
+          padding: 40px 45px 40px 40px
+          position: relative
+          overflow: hidden
+          z-index: 2
+          margin-bottom: $space*4.5
+          p
+            margin-top: $space/2
+          p, span
+            color: $neutral-light
+          span
+            @include absolute
+            top: auto
+            left: auto
+            right: -55px
+            bottom: -55px
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            background: #e7015e
+            color: #fff
+            display: block
+            text-align: left
+            font-weight: 700
+            padding: $space*1.5 $space*1.8
+      .video
+        max-width: 33.33%
+        flex: 1
+        .intro-video
+          width: 700px
+          height: 700px
+          border-radius: 50%
+          position: relative
+          overflow: hidden
+          margin: -10rem
+          z-index: 1
+          img
+            max-width: 100%
+            height: 100%
+          &:before
+            background-image: -webkit-linear-gradient(90deg, #e6005d 0%, rgba(115, 0, 47, 0.35) 65%, rgba(0, 0, 0, 0) 100%)
+            position: absolute
+            left: 0
+            top: 0
+            content: ''
+            width: 100%
+            height: 100%
 </style>
 
