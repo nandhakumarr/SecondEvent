@@ -44,7 +44,6 @@ section.about
       flex-wrap: wrap
       margin-right: 15px
       margin-left: 15px
-      // paddin: $space*2
       .text
         max-width: 33.33%
         flex: 1
@@ -52,7 +51,7 @@ section.about
           background: $white
           box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.08)
           border-radius: 5px
-          padding: 40px 45px 40px 40px
+          padding: $space*2.5 $space*2.8 $space*2.5 $space*2.5
           position: relative
           overflow: hidden
           z-index: 2
@@ -67,8 +66,8 @@ section.about
             left: auto
             right: -55px
             bottom: -55px
-            width: 120px
-            height: 120px
+            width: 7.5rem
+            height: 7.5rem
             border-radius: 50%
             background: #e7015e
             color: #fff
@@ -80,12 +79,12 @@ section.about
         max-width: 33.33%
         flex: 1
         .intro-video
-          width: 700px
-          height: 700px
+          width: 32rem
+          height: 32rem
           border-radius: 50%
           position: relative
           overflow: hidden
-          margin: -10rem
+          margin: -5rem
           z-index: 1
           img
             max-width: 100%

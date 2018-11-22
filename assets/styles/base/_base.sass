@@ -32,3 +32,16 @@ body
 ul
   li
     @include reset
+
+h2
+  &:after
+    @include absolute-s
+    content: ''
+    background-image: url(/images/title.png)
+    background-repeat: no-repeat
+    background-size: center center
+    background-position: contain
+    width: 4.3rem
+    height: 0.65rem
+    margin: auto auto -3rem
+    top: 2rem
