@@ -14,7 +14,9 @@ section.blog
         .card-title
           h2 {{ blog.title }}
           p {{ blog.details }}
-        a(href="#") Read More  
+        .readmore  
+          a(href="#") Read More  
+          img(src="/images/right-arrow.png")
 
 </template>
 
@@ -40,8 +42,7 @@ section.blog
     .blog-title
       text-align: center
     .blogs  
-      padding: $space
-      text-align: center
+      padding: $space*2
       @media (min-width: $breakpoint-tab-4)
         @include flex
       .card
@@ -49,6 +50,7 @@ section.blog
         box-sizing: border-box
         color: black
         padding: $space
+        margin-bottom: $space*5
         @media (min-width: $breakpoint-tab-4)
           width: 31.33% 
         .thumb
@@ -56,19 +58,26 @@ section.blog
           img
             border-radius: 20px
             width: 100%
+            // margin-bottom: $space
+            position: relative
+            top: -5rem
         .blog-author
           @include flex
+          padding: $space
           span
             color: #ff007a 
         .card-title
+          padding: $space
           h2
             font-size: $space*1.2
           p
-            color: #888888  
-        a
-          color: black    
-
-
-      
+            color: #888888 
+        .readmore     
+          @include flex
+          justify-content: flex-start
+          a
+            padding: $space
+            color: black
+            
 </style>
 
