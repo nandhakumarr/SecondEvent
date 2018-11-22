@@ -57,7 +57,7 @@ export default {
   letter-spacing: 1px;
 }
 .back-to {
-  background: #e7015e none repeat scroll 0 0;
+    background: #e7015e none repeat scroll 0 0;
     border-radius: 50%;
     bottom: 35px;
     color: #979797;
