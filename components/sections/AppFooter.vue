@@ -66,8 +66,12 @@ section.app-footer
   .container
     .newsletter
       background-image: url(/images/subscribe-pattern.png)
-      background-image: url(/images/subscribe-slice-left.png) reap
+      background-image: url(/images/subscribe-slice-left.png) 
       background-color: #3b1d82
+      background-repeat: no-repeat
+      background-size: cover
+      // width: 100%
+      height: 20rem
       margin: 0 auto
       padding: $space*2
       margin: $space
@@ -91,7 +95,7 @@ section.app-footer
           border: none
           border-bottom: 1px solid #6f55b0
           background: none 
-          padding: 1rem     
+          padding: 1rem    
         .btn
           padding: 0 $space*2
           line-height: $space*3.2
