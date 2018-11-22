@@ -41,6 +41,7 @@ section.blog
   .container
     .blog-title
       text-align: center
+      padding: $space*3
     .blogs  
       padding: $space*2
       @media (min-width: $breakpoint-tab-4)
