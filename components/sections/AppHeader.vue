@@ -1,9 +1,13 @@
 <template lang="pug">
 section.app-header(:class="{dark: isScroll}")
   .container
+section.app-header
+  .container(:class="{open: open}")
     a.logo
       img(src="/images/logo.png")
-    nav.navigation
+    a.hamburger(@click="toggle()")
+      img(src="/images/menu.png")
+    nav.navigation(:class="{open: open}")
       .primary
         a(href="#", v-scroll-to="'.hero'") home
         a(href="#", v-scroll-to="'.about'") about
@@ -54,6 +58,7 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
 
+
 section
   .container
     @include fixed-n
@@ -67,6 +72,18 @@ section
         font-size: 0.9rem
       // ::after
       //   content: '\f107'
+        text-decoration: none
+      // ::after
+      //   content: '\f107'
+        
+      @media (max-width: 960px) 
+        display: none  
+    a.hamburger
+      margin-right: $space*2
+      @media (min-width: 960px) 
+        display: none   
+        
+      
 
 
 .app-header.dark
