@@ -32,7 +32,7 @@ section.app-footer
         li Tickets
         li Venue   
     .copyrights
-      p Copyright © 2018 Exhibz. All Rights Reserved.     
+      p Copyright  &copy  2018 Exhibz. All Rights Reserved.     
 </template>
 
 <script>
@@ -65,8 +65,9 @@ section.app-footer
 section.app-footer
   .container
     .newsletter
-      background-image: url(/images/subcribe-pattern.png)
-      background-color: green
+      background-image: url(/images/subscribe-pattern.png)
+      background-image: url(/images/subscribe-slice-left.png) repeat
+      background-color: #3b1d82
       margin: 0 auto
       padding: $space*2
       margin: $space
@@ -99,10 +100,27 @@ section
     .social-media, .footer-menu
       text-align: center
       ul
+        margin-bottom: $space*2
         li
           display: inline-block
-      img
-        width: 25px
+          margin: 1rem
+          list-style: none
+          color: #a8a8ad
+          font-size: $space*1.5
+          img
+            width: 50px
+            border: 1px solid #525164
+            border-radius: 50%
+            padding: $space
+    .footer-menu, .copyrights
+      color: #a8a8ad
+      p
+        font-size: $space*1.3
+
+
+
+
+
     
        
     
