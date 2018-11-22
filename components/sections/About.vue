@@ -99,3 +99,8 @@ section.about
             height: 100%
 </style>
 
+<style lang="sass" scoped>
+section.about
+  .intro
+    display: block
+</style>

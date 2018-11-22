@@ -1,11 +1,11 @@
 <template lang="pug">
-section.app-header(:class="{dark: isScroll}")
-  .container(:class="{open: open}")
+section.app-header(:class="{dark: isScroll, show: show}")
+  .container
     a.logo
       img(src="/images/logo.png")
     a.hamburger(@click="toggle()")
       img(src="/images/menu.png")
-    nav.navigation(:class="{open: open}")
+    nav.navigation(:class="{show: show}")
       .primary
         a(href="#", v-scroll-to="'.hero'") home
         a(href="#", v-scroll-to="'.about'") about
@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       isScroll: false,
-      open: false
+      show: false
     }
   },
   created () {
@@ -41,13 +41,10 @@ export default {
       this.isScroll = window.scrollY >= 100
     },
     toggle(){
-      this.open = !this.open
-    },
-    show () {
-      this.open = true
+      this.show = !this.show
     },
     hide () {
-      this.open = false
+      this.show = false
     }
   }
 }
@@ -73,17 +70,15 @@ section
         text-decoration: none
       // ::after
       //   content: '\f107'
-        
-      @media (max-width: 960px) 
-        display: none  
+
+      @media (max-width: 960px)
+        display: none
     a.hamburger
       margin-right: $space*2
-      @media (min-width: 960px) 
-        display: none   
-        
-      
+      @media (min-width: 960px)
+        display: none
 
-
+//Sticky
 .app-header.dark
   background: rgba(26, 24, 49, 0.95)
   z-index: 99

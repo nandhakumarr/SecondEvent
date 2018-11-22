@@ -1,11 +1,11 @@
 <template lang="pug">
 section.app-footer
   .container
-    .book-seat
+    header.white
       span Hurry Up!
       h2 Book your Seat
-      button.btn Buy Ticket
-    .newsletter    
+    button.btn Buy Ticket
+    .newsletter
       .section-title
         span SUBSCRIBE TO NEWSLETTER
         h2 Want something extra?
@@ -21,7 +21,7 @@ section.app-footer
         li
           img(src="/images/google+.png")
         li
-          img(src="/images/linkedin.png")    
+          img(src="/images/linkedin.png")
         li
           img(src="/images/instagram.png")
     .footer-menu
@@ -30,9 +30,9 @@ section.app-footer
         li Blogs
         li Contact
         li Tickets
-        li Venue   
+        li Venue
     .copyrights
-      p Copyright  &copy  2018 Exhibz. All Rights Reserved.     
+      p Copyright  &copy  2018 Exhibz. All Rights Reserved.
 </template>
 
 <script>
@@ -48,21 +48,23 @@ section.app-footer
   background-repeat: no-repeat
   background-size: cover
   min-height: 50vh
+  &:after
+    content: ''
+    background: $event-blue
 section.app-footer
   .container
     text-align: center
-    .book-seat
+    header
       padding: $space*1.2
-      span, a
-        color: $white  
-      h2
-        color: $white
-        padding: $space*2
+      // span, a
+      //   color: $white
+    button
+      margin-top: $space*-1
 section.app-footer
   .container
     .newsletter
       background-image: url(/images/subscribe-pattern.png)
-      background-image: url(/images/subscribe-slice-left.png) 
+      background-image: url(/images/subscribe-slice-left.png)
       background-color: #3b1d82
       background-repeat: no-repeat
       background-size: cover
@@ -81,16 +83,16 @@ section.app-footer
           padding: $space*2 0
           font-weight: 800
           color: $white
-        
-      .section-form   
-        @include flex 
+
+      .section-form
+        @include flex
         align-items: flex-end
         input
           width: 100%
           border: none
           border-bottom: 1px solid #6f55b0
-          background: none 
-          padding: 1rem   
+          background: none
+          padding: 1rem
 section
   .container
     .social-media, .footer-menu
