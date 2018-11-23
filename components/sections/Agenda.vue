@@ -8,7 +8,7 @@ section.agenda
         p World is committed to making participation in the event a harassment free experience for everyone, regardless of level of experience, gender, gender identity and expression
       .schedule-date
         nav.days
-          a(@click="select(i)",v-for="(day, i) in data", :key="i", :class="day.day")
+          a(@click="select(i)",v-for="(day, i) in data", :key="i", :class="[ 'day' + i, { 'selected': selected === i }]")
             span.day {{ day.day }}
             span.date {{ day.date }}
 
@@ -101,6 +101,9 @@ section.agenda
             color: $white
             flex-direction: column
             position: absolute
+            cursor: pointer
+            opacity: 0.5
+            z-index: 1
             @media (max-width: $breakpoint-tab-4)
               position: static
               width: 50rem
@@ -108,25 +111,6 @@ section.agenda
               position: absolute
               width: $day-size/1.5
               height: $day-size/1.5
-
-            &.friday
-              background: linear-gradient(110deg, #fc6076 0%, #ff9a44 100%)
-              z-index: 3
-              top: $day-size*0.7
-            &.saturday
-              background: linear-gradient(-45deg, #22e1ff 0%, #1d8fe1 49%, #625eb1 100%)
-              opacity: 0.5
-              z-index: 2
-              left: $day-size*0.5
-            &.sunday
-              background: -webkit-radial-gradient(50% 50%, circle closest-side, #57c6e1 0%, #b49fda 0%, #7ac5d8 0%, #eea2a2 0%, #b1aff0 0%, #836df0 100%)
-              opacity: 0.5
-              z-index: 1
-              @include absolute-ne
-              top: 6rem
-              left: 15rem
-              @media (max-width: $breakpoint-tab-4)
-                position: static
             span.day
               font-size: 1.75rem
               text-transform: uppercase
@@ -134,6 +118,23 @@ section.agenda
               line-height: 2rem
             span.date
               font-size: 1.5rem
+            &.selected
+              opacity: 1
+              z-index: 3
+              box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.12)
+            &.day0
+              background: linear-gradient(110deg, #fc6076 0%, #ff9a44 100%)
+              top: $day-size*0.7
+            &.day1
+              background: linear-gradient(-45deg, #22e1ff 0%, #1d8fe1 49%, #625eb1 100%)
+              left: $day-size*0.5
+            &.day2
+              background: -webkit-radial-gradient(50% 50%, circle closest-side, #57c6e1 0%, #b49fda 0%, #7ac5d8 0%, #eea2a2 0%, #b1aff0 0%, #836df0 100%)
+              @include absolute-ne
+              top: 6rem
+              left: 15rem
+              @media (max-width: $breakpoint-tab-4)
+                position: static
 
 section.agenda
   .container
@@ -198,14 +199,14 @@ section.agenda
               border-radius: 50%
               // margin-right: $space*2
               @media (max-width: $breakpoint-tab-4)
-                display: none 
+                display: none
           .session-title
             .data
               @include flex-1
               @media (max-width: $breakpoint-tab-4)
                 display: block
               h3
-                
+
 
               span
                 color: $neutral-light !important
@@ -240,6 +241,6 @@ section.agenda
     width: 100%
     button
 
-  
+
 </style>
 
