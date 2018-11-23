@@ -1,4 +1,6 @@
 const pkg = require('./package')
+import * as VueGoogleMaps from 'vue2-google-maps'
+
 
 module.exports = {
   mode: 'spa',
@@ -52,5 +54,12 @@ module.exports = {
     extend(config, ctx) {
 
     }
-  }
+  },
+  
 }
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'YOUR_API_TOKEN',
+    libraries: 'places',
+  }
+
