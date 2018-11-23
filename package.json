@@ -13,7 +13,8 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
-    "vue-scroll-to": "^2.2.1"
+    "vue-scroll-to": "^2.2.1",
+    "vue2-google-maps": "^0.10.3"
   },
   "devDependencies": {
     "node-sass": "^4.10.0",

@@ -26,6 +26,7 @@ section.agenda
                 h3(:class="s.class") {{ s.title }}
                 span(:class="s.class") {{ s.tag_name }}
               p {{ s.content }}
+    button.btn more details
 </template>
 
 <script>
@@ -57,9 +58,9 @@ section.agenda
     min-height: 100vh
     .head
       @include spread
-      margin-bottom: $space*5
-      // @media (max-width: $breakpoint-tab-4)
-      //   display: block
+      margin-bottom: $space*3.5
+      @media (max-width: $breakpoint-tab-4)
+        display: block
       header
         flex: 1
         max-width: 50%
@@ -102,6 +103,7 @@ section.agenda
             position: absolute
             @media (max-width: $breakpoint-tab-4)
               position: static
+              width: 50rem
             @media (max-width: $breakpoint-tab-portrait)
               position: absolute
               width: $day-size/1.5
@@ -123,6 +125,8 @@ section.agenda
               @include absolute-ne
               top: 6rem
               left: 15rem
+              @media (max-width: $breakpoint-tab-4)
+                position: static
             span.day
               font-size: 1.75rem
               text-transform: uppercase
@@ -139,7 +143,7 @@ section.agenda
         @include spread
         flex-direction: row
         // border: 1px dotted $neutral-light
-        // height: 10rem
+        height: 10rem
         @media (max-width: $breakpoint-tab-4)
           border: 1px solid $neutral-light
           display: block
@@ -150,8 +154,8 @@ section.agenda
 
 
         .time
-          // margin-right: 2rem
-          // width: $space*11
+          margin-right: 2rem
+          width: $space*11
           height: 10rem
           position: relative
           padding: $space*3 $space*1.5
@@ -192,23 +196,22 @@ section.agenda
               width:  $space*5
               height:  $space*5
               border-radius: 50%
-              // margin-right: $space*4
-          //     @media (max-width: $breakpoint-tab-4)
-          //       display: none
+              // margin-right: $space*2
+              @media (max-width: $breakpoint-tab-4)
+                display: none 
           .session-title
             .data
               @include flex-1
               @media (max-width: $breakpoint-tab-4)
                 display: block
               h3
+                
 
               span
-                // padding: $space
                 color: $neutral-light !important
                 // margin-left: $space*10
             p
               padding-top: $space*2
-              // width: 63%
               color: $neutral-light !important
               @media (max-width: $breakpoint-tab-4)
                 width: 100%
@@ -226,5 +229,17 @@ span.lunch
 
 span.lunch
   margin-left: $space*10
+  p
+    padding: $space
+    width: 63%
+    color: $neutral-light !important
+    @media (max-width: $breakpoint-tab-4)
+      width: 100%
+section.agenda
+  .container
+    width: 100%
+    button
+
+  
 </style>
 
