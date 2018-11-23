@@ -6,7 +6,7 @@ section.venue
       h2 Get Direction to Event Hall
     .content  
       nav
-        a.btn(@click="select(i)", v-for="(v, i) in data", :key="i")  {{ v.tab_name }}
+        a.btn(@click="select(i)", v-for="(v, i) in data", :key="i", :class="{'btn-primary': selected === i }")  {{ v.tab_name }}
       main
         .detail(v-if="selected === i", v-for="(v,i) in data", :key="i")
           .details(v-for="(s,j) in v.venuetabs" :key="j")
@@ -15,20 +15,14 @@ section.venue
             .contact
               .ticketinfo
                 h3 Ticket Info
-                strong Name:
-                  p  {{ s.t_name }}
-                strong Phone:
-                  p  {{ s.t_phone }}
-                strong Email:
-                  p  {{ s.t_mail }}
+                label Name: {{ s.t_name }}
+                label Phone: {{ s.t_phone }}                 
+                label Email: {{ s.t_mail }}                
               .program-details  
                 h3 Program Details
-                strong Name:
-                  p  {{ s.p_name }}
-                strong Phone:
-                  p  {{ s.p_phone }}
-                strong Email:
-                  p  {{ s.p_mail }}
+                label Name: {{ s.p_name }}
+                label Phone: {{ s.p_phone }}
+                label Email:  {{ s.p_mail }}
               
 </template>
 
@@ -53,14 +47,21 @@ export default {
 @import 'assets/styles/includes'
 section.venue
   .container
+    padding: $space*5
     header
       text-align: left
     nav
-      padding: $space
+      padding-bottom: $space*2
       a.btn
         background: none
+        box-shadow: none
         color: #888888
-        padding: 0 $space 0 0
+        height: 40px
+        padding: 0 $space*0.65
+      a.btn.btn-primary
+        color: #ff007a
+
+        
        
     main
       .detail
@@ -68,8 +69,9 @@ section.venue
           p
             color: #888888 
           .contact
-            @include flex 
-            justify-content: flex-start
+            @media (min-width: $breakpoint-tab-1)
+              @include flex 
+              justify-content: flex-start
             .ticketinfo, .program-details
               @include flex   
               flex-direction: column
@@ -77,9 +79,11 @@ section.venue
               align-items: end
               line-height: $space*2.5
               padding-top: $space
-              padding-bottom: $space
-              p
-                color: #888888 
+              padding-bottom: $space  
+            .program-details
+              @media (min-width: $breakpoint-tab-1)
+                margin-left: $space*2  
+      
 
 </style>
 
