@@ -1,7 +1,7 @@
 <template lang="pug">
 section.sponsors
   .container
-    .sponsor-title
+    header.white
       span WHO HELP US
       h2 Our Sponsers
     .sponsor-logos
@@ -23,7 +23,7 @@ section.sponsors
         img(src="/images/sponsor8.png")
       a(href="#")
         img(src="/images/sponsor9.png")
-    button.btn BECOME A SPONSOR  
+    button.btn BECOME A SPONSOR
 
 </template>
 
@@ -40,7 +40,7 @@ section.sponsors
   min-height: 100vh
   .container
     text-align: center
-    .sponsor-title
+    header.white
       padding-top: $space*4
       h2
         color: $white
@@ -52,7 +52,7 @@ section.sponsors
           padding: $space*2
     .btn
       margin: $space*1
-           
+
 
 
 </style>

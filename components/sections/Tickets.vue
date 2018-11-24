@@ -4,6 +4,7 @@ section.tickets
     header.white
       span Pricing Plans
       h2 Get your Ticket
+    img.pricing-img(src="/images/pricing-memphis1.png")
     main
       .pricing-item(v-for="(t, i) in data" key="i")
         img.dot(src="/images/dot.png")
@@ -13,7 +14,7 @@ section.tickets
             h3 {{ t.price }}
             p Available tickets for this price
           .pricing-progress
-            .progress-inner
+            .progress-inner(:class="t.title.toLowerCase()")
             p {{ t.progress }}
           .promotional-code
             p.text Enter Promotional code
@@ -53,6 +54,7 @@ section.tickets
       @include flex
       flex-wrap: wrap
       position: relative
+      padding: $space*4
       .pricing-item
         position: relative
         text-align: center
@@ -86,7 +88,11 @@ section.tickets
     letter-spacing: 1px
     margin-bottom: $space*1.5
 
-
+.container
+  .pricing-img
+    position: relative
+    @include absolute-ne
+    top: 7rem
 .pricing-progress
   width: 100%
   height: 10px
@@ -96,6 +102,10 @@ section.tickets
     margin-bottom: $space
     background-image: linear-gradient(144deg, #321575 0%, #8d0b93 51%, #ff0066 100%, #ff057c 100%)
     height: 100%
+    &.regular
+      width: 75%
+    &.platinum
+      width: 50%
   p
     color: $event-pink
     font-weight: 800

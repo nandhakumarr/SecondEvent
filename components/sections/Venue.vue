@@ -4,7 +4,7 @@ section.venue
     header
       span REACH US
       h2 Get Direction to Event Hall
-    .content  
+    .content
       nav
         a.btn(@click="select(i)", v-for="(v, i) in data", :key="i", :class="{'btn-primary': selected === i }")  {{ v.tab_name }}
       main
@@ -16,14 +16,14 @@ section.venue
               .ticketinfo
                 h3 Ticket Info
                 label Name: {{ s.t_name }}
-                label Phone: {{ s.t_phone }}                 
-                label Email: {{ s.t_mail }}                
-              .program-details  
+                label Phone: {{ s.t_phone }}
+                label Email: {{ s.t_mail }}
+              .program-details
                 h3 Program Details
                 label Name: {{ s.p_name }}
                 label Phone: {{ s.p_phone }}
                 label Email:  {{ s.p_mail }}
-              
+            
 </template>
 
 <script>
@@ -39,7 +39,7 @@ export default {
     select (i) {
       this.selected = i
     }
-  }  
+  }
 }
 </script>
 
@@ -50,6 +50,13 @@ section.venue
     padding: $space*5
     header
       text-align: left
+      h2
+        // margin-bottom: $space*2
+        // margin-top: $space*2
+        &:after
+          content: ''
+          @include absolute-w
+          top: $space*12
     nav
       padding-bottom: $space*2
       a.btn
@@ -61,29 +68,29 @@ section.venue
       a.btn.btn-primary
         color: #ff007a
 
-        
-       
+
+
     main
       .detail
         .details
           p
-            color: #888888 
+            color: #888888
           .contact
             @media (min-width: $breakpoint-tab-1)
-              @include flex 
+              @include flex
               justify-content: flex-start
             .ticketinfo, .program-details
-              @include flex   
+              @include flex
               flex-direction: column
               justify-content: flex-start
               align-items: end
               line-height: $space*2.5
               padding-top: $space
-              padding-bottom: $space  
+              padding-bottom: $space
             .program-details
               @media (min-width: $breakpoint-tab-1)
-                margin-left: $space*2  
-      
+                margin-left: $space*2
+
 
 </style>
 

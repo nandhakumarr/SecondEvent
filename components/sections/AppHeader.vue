@@ -10,7 +10,7 @@ section.app-header(:class="{dark: isScroll, show: show}")
         a(href="#", v-scroll-to="'.hero'") home
         a(href="#", v-scroll-to="'.about'") about
         a(href="#", v-scroll-to="'.speakers'") speakers
-        a(href="#", v-scroll-to="'.schedule'") schedule
+        a(href="#", v-scroll-to="'.agenda'") schedule
         a(href="#", v-scroll-to="'.blog'") blog
         a(href="#", v-scroll-to="'.app-footer'") contact
         a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket

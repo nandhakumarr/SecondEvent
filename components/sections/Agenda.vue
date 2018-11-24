@@ -26,7 +26,8 @@ section.agenda
                 h3(:class="s.class") {{ s.title }}
                 span(:class="s.class") {{ s.tag_name }}
               p {{ s.content }}
-    button.btn more details
+    .cta
+      a.btn more details
 </template>
 
 <script>
@@ -240,7 +241,11 @@ span.lunch
 section.agenda
   .container
     width: 100%
-    button
-
+    .cta
+      width: 50%
+      text-align: center
+      margin-right: auto
+      margin-left: auto
+      padding-bottom: $space*4
 </style>
 

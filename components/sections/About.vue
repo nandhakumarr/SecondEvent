@@ -37,6 +37,7 @@ section.about
   background-image: url(/images/lines.png)
   background-repeat: no-repeat
   background-position: center
+  padding-top: $space*3
   .container
     // padding: $space*4
     .intro
