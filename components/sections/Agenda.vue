@@ -104,6 +104,7 @@ section.agenda
             cursor: pointer
             opacity: 0.5
             z-index: 1
+            transition: all 0.4s ease
             @media (max-width: $breakpoint-tab-4)
               position: static
               width: 50rem
@@ -124,7 +125,7 @@ section.agenda
               box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.12)
             &.day0
               background: linear-gradient(110deg, #fc6076 0%, #ff9a44 100%)
-              top: $day-size*0.7
+              top: $day-size*0.6
             &.day1
               background: linear-gradient(-45deg, #22e1ff 0%, #1d8fe1 49%, #625eb1 100%)
               left: $day-size*0.5
@@ -144,7 +145,7 @@ section.agenda
         @include spread
         flex-direction: row
         // border: 1px dotted $neutral-light
-        height: 10rem
+        // height: 10rem
         @media (max-width: $breakpoint-tab-4)
           border: 1px solid $neutral-light
           display: block
@@ -240,7 +241,6 @@ section.agenda
   .container
     width: 100%
     button
-
 
 </style>
 
