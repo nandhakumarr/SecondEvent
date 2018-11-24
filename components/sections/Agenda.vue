@@ -62,14 +62,20 @@ section.agenda
       margin-bottom: $space*3.5
       @media (max-width: $breakpoint-tab-4)
         display: block
+        margin-bottom: $space
       header
         flex: 1
         max-width: 50%
         text-align: left
         align-self: center
+        @media (max-width: $breakpoint-tab-4)
+          max-width: 100%
+          margin-bottom: 3rem
         h2
           margin-bottom: $space*2
           margin-top: $space*2
+          @media (max-width: $breakpoint-tab-4)
+            margin-bottom: $space
           &:after
             content: ''
             @include absolute-w
@@ -78,15 +84,22 @@ section.agenda
           // padding: $space 0
           color: $neutral-light
           // width: $space*30
+
+section.agenda
+  .container
+    .head
       .schedule-date
         flex: 1
         max-width: 50%
         align-self: center
+        @media (max-width: $breakpoint-tab-4)
+          max-width: 50rem
         .days
           position: relative
           min-height: 30rem
           margin: 0 auto
           @media (max-width: $breakpoint-tab-4)
+            min-height: 20rem
             width: 100%
             @include flex
           a
@@ -147,77 +160,83 @@ section.agenda
         flex-direction: row
         // border: 1px dotted $neutral-light
         // height: 10rem
-        @media (max-width: $breakpoint-tab-4)
+        @media (max-width: $breakpoint-tab-portrait)
           border: 1px solid $neutral-light
           display: block
           margin-left: auto
           margin-right: auto
           height: 20rem
           width: 30rem
+section.agenda
+  .container
+    .time
+      margin-right: 2rem
+      width: $space*11
+      height: 10rem
+      position: relative
+      padding: $space*3 $space*1.5
+      background: $event-red
+      // text-align: center
+      flex: 0 0 20%
+      max-width: 20%
+      @media (max-width: $breakpoint-tab-portrait)
+        width: 100%
+        height: 7rem
+        padding: 1.5rem
+        margin: 0
+        text-align: left
 
-
-        .time
-          margin-right: 2rem
-          width: $space*11
-          height: 10rem
-          position: relative
-          padding: $space*3 $space*1.5
-          background: $event-red
-          // text-align: center
-          flex: 0 0 20%
-          max-width: 20%
+      h4
+        color: $white
+        // margin-top: $space*3
+        @media (max-width: $breakpoint-tab-4)
+          margin-top: 0
+      h6
+        font-size: 1.25rem
+        color: $white
+    .details
+      flex: 100%
+      height: 10rem
+      position: relative
+      padding: 35px 40px 35px 60px
+      border: 1px dashed #e5e5e5
+      border-left: none
+      width: 100%
+      @include flex
+      @media (max-width: $breakpoint-tab-4)
+        display: block
+        width: 100%
+section.agenda
+  .container
+    .sessions
+      .session-speaker
+        margin-right: $space*6
+        img
+          width:  $space*5
+          height:  $space*5
+          border-radius: 50%
+          // margin-right: $space*2
           @media (max-width: $breakpoint-tab-4)
-            width: 100%
-            height: 7rem
-            padding: 1.5rem
-            margin: 0
-            text-align: left
-
-          h4
-            color: $white
-            // margin-top: $space*3
-            @media (max-width: $breakpoint-tab-4)
-              margin-top: 0
-          h6
-            font-size: 1.25rem
-            color: $white
-        .details
-          flex: 100%
-          height: 10rem
-          position: relative
-          padding: 35px 40px 35px 60px
-          border: 1px dashed #e5e5e5
-          border-left: none
-          width: 100%
-          @include flex
+            display: none
+section.agenda
+  .container
+    .sessions
+      .session-title
+        .data
+          @include flex-1
           @media (max-width: $breakpoint-tab-4)
             display: block
+          h3
+
+
+          span
+            color: $neutral-light !important
+            // margin-left: $space*10
+        p
+          padding-top: $space*2
+          color: $neutral-light !important
+          @media (max-width: $breakpoint-tab-4)
             width: 100%
-          .session-speaker
-            margin-right: $space*6
-            img
-              width:  $space*5
-              height:  $space*5
-              border-radius: 50%
-              // margin-right: $space*2
-              @media (max-width: $breakpoint-tab-4)
-                display: none
-          .session-title
-            .data
-              @include flex-1
-              @media (max-width: $breakpoint-tab-4)
-                display: block
-              h3
-
-
-              span
-                color: $neutral-light !important
-                // margin-left: $space*10
-            p
-              padding-top: $space*2
-              color: $neutral-light !important
-              @media (max-width: $breakpoint-tab-4)
-                width: 100%
 
 .session
   &:nth-child(even)
