@@ -1,6 +1,5 @@
 <template lang="pug">
 section.hero
-  app-header
   .container
     .banner-content
       p 5 to 7 June 2019, Waterfront Hotel, London
@@ -9,18 +8,8 @@ section.hero
       .cta
         a.btn Buy Ticket
     .banner-img
-      img(src="/images/banner-img.png")
+      img(src="/images/banner-img.png", height="720")
 </template>
-
-<script>
-import AppHeader from '~/components/sections/AppHeader.vue'
-export default {
-  components: {
-    AppHeader
-  }
-
-}
-</script>
 
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
@@ -30,6 +19,8 @@ section.hero
   background-size: cover
   color: $white
   padding-top: $space*7
+  height: 800px
+  overflow: hidden
   .container
     @include spread
     .banner-content
@@ -46,7 +37,7 @@ section.hero
         @media (max-width: $breakpoint-mobile)
           font-size: 1.8rem
     .banner-img
-      position: relative
+      // position: relative
       img
         max-width: 100%
         vertical-align: middle

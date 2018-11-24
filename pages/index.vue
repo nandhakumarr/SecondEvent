@@ -9,6 +9,7 @@
   blog
   sponsors
   venue
+  app-header
   app-footer
   .back-to
     a(href="#", v-scroll-to="'.hero'")
@@ -26,6 +27,7 @@ import Tickets from '~/components/sections/Tickets.vue'
 import Blog from '~/components/sections/Blog.vue'
 import Sponsors from '~/components/sections/Sponsors.vue'
 import Venue from '~/components/sections/Venue.vue'
+import AppHeader from '~/components/sections/AppHeader.vue'
 import AppFooter from '~/components/sections/AppFooter.vue'
 
 export default {
@@ -39,6 +41,7 @@ export default {
     Blog,
     Sponsors,
     Venue,
+    AppHeader,
     AppFooter
   }
 }
