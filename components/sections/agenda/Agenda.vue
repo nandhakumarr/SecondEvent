@@ -163,23 +163,32 @@ section.agenda
         @media (max-width: $breakpoint-tab-portrait)
           border: 1px solid $neutral-light
           display: block
+          margin-left: auto
+          margin-right: auto
+          height: 24rem
+          width: 30rem
+
 section.agenda
   .container
     .time
+      // margin-right: 2rem
       width: $space*11
       height: 10rem
       position: relative
       padding: $space*3 $space*1.5
       background: $event-red
-      @media (min-width: $breakpoint-desktop)
-        flex: 0 0 20%
-        max-width: 20%
-      @media (max-width: $breakpoint-tab-portrait)
+      // flex: 0 0 20%
+      // max-width: 20%
+      @media (max-width: $breakpoint-desktop-1)
+        // width: 100%
+        height: 10rem
+        // padding: $space*3 $space*3
+        margin: 0
+        text-align: left
+        flex: none
+      @media (max-width: $breakpoint-tab-1)
         width: 100%
-        height: 7rem
-      @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
-        height: 13rem
-        width: 50%
+        height: 10rem
 
       h4
         color: $white
@@ -189,24 +198,26 @@ section.agenda
         font-size: 1.25rem
         color: $white
     .details
-      flex: 100%
+      flex: 80%
       height: 10rem
       position: relative
       padding: 35px 40px 35px 60px
       border: 1px dashed #e5e5e5
-      border-left: none
+      // border-left: none
       width: 100%
       @include flex
-      @media (max-width: $breakpoint-tab-portrait)
+      @media (max-width: $breakpoint-desktop-1)
         display: block
+        // width: 100%
+        height: 10rem
+        flex: none
+      @media (max-width: $breakpoint-tab-1)
         width: 100%
-        height: 15rem
-      @media (max-width: $breakpoint-mobile)
-        height: 20rem
-      @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
-        height: 13rem
-        width: 50%
-        padding: 0
+        height: 10rem
+        // margin-top: $space
+        // margin-bottom: $space*3
+        // border: none
+
 
 section.agenda
   .container
@@ -227,9 +238,6 @@ section.agenda
           @include flex-1
           @media (max-width: $breakpoint-tab-4)
             display: block
-          h3
-
-
           span
             color: $neutral-light !important
         p
@@ -237,6 +245,7 @@ section.agenda
           color: $neutral-light !important
           @media (max-width: $breakpoint-tab-4)
             width: 100%
+            padding: 0
 
 .session
   &:nth-child(even)
@@ -248,11 +257,8 @@ span.lunch
   @include absolute-nw
   left: 15rem
   margin-top: $space*3
-  @media (max-width: $breakpoint-tab-portrait)
-    left: 5rem
-    display: block
   @media (max-width: $breakpoint-tab-4)
-    left: 6rem
+    left: 5rem
 
 span.lunch
   margin-left: $space*10
