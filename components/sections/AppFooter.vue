@@ -70,8 +70,8 @@ section.app-footer
       background-size: cover
       height: 20rem
       margin: 0 auto
-      padding: $space*2
-      margin: $space
+      padding: $space 0
+      margin-top: $space*3
       .section-title
         padding-top: $space*2
         span
@@ -87,12 +87,18 @@ section.app-footer
       .section-form
         @include flex
         align-items: flex-end
+        margin: $space
         input
-          width: 100%
+          width: 80%
           border: none
           border-bottom: 1px solid #6f55b0
           background: none
           padding: 1rem
+        .btn
+          @media (max-width: $breakpoint-tab-1)
+            padding: 0 $space
+
+
 section
   .container
     .social-media, .footer-menu
@@ -102,17 +108,21 @@ section
         li
           display: inline-block
           margin: 1rem
+          height: 40px
           list-style: none
           color: #a8a8ad
-          font-size: $space*1.5
+          font-size: $space*1
+          margin: 0.3rem
           img
-            width: 50px
+            width: 45px
             border: 1px solid #525164
             border-radius: 50%
-            padding: $space
+            padding: $space*0.75
     .footer-menu, .copyrights
-      color: #a8a8ad
+      // text-align: left
       p
-        font-size: $space*1.3
+        color: #a8a8ad
+        font-size: $space*1
+
 </style>
 

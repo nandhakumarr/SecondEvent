@@ -152,19 +152,22 @@ section.agenda
       .session
         @include spread
         flex-direction: row
-        @media (max-width: $breakpoint-tab-portrait)
-          border: 1px solid $neutral-light
-          display: block
-          margin-left: auto
-          margin-right: auto
-          height: 20rem
-          width: 30rem
+        // height: 20rem
+        // @media (max-width: $breakpoint-tab-4)
+        //   height: 25rem
+        // @media (max-width: $breakpoint-tab-portrait)
+        //   border: 1px solid $neutral-light
+        //   display: block
+        //   margin-left: auto
+        //   margin-right: auto
+          // height: 20rem
+          // width: 30rem
 section.agenda
   .container
     .time
       margin-right: 2rem
       width: $space*11
-      height: 10rem
+      // height: 10rem
       position: relative
       padding: $space*3 $space*1.5
       background: $event-red
