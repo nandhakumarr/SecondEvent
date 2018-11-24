@@ -52,6 +52,7 @@ export default {
 @import 'assets/styles/includes'
 
 $day-size: 15rem
+$day-size-tab: 15rem
 
 
 section.agenda
@@ -90,18 +91,18 @@ section.agenda
     .head
       .schedule-date
         flex: 1
-        max-width: 50%
-        align-self: center
-        @media (max-width: $breakpoint-tab-4)
-          max-width: 50rem
+        @media (max-width: $breakpoint-tab-portrait)
+          height: 25rem
+          position: relative
         .days
           position: relative
           min-height: 30rem
           margin: 0 auto
-          @media (max-width: $breakpoint-tab-4)
-            min-height: 20rem
-            width: 100%
-            @include flex
+          @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
+            @include flex(center, center)
+          @media (max-width: $breakpoint-tab-portrait)
+            @include absolute
+            width: 33rem
           a
             @include flex-1
             padding:  $space
@@ -119,13 +120,9 @@ section.agenda
             opacity: 0.5
             z-index: 1
             transition: all 0.4s ease
-            @media (max-width: $breakpoint-tab-4)
+            @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
               position: static
-              width: 50rem
-            @media (max-width: $breakpoint-tab-portrait)
-              position: absolute
-              width: $day-size/1.5
-              height: $day-size/1.5
+              margin: 0 1rem
             span.day
               font-size: 1.75rem
               text-transform: uppercase
@@ -145,11 +142,8 @@ section.agenda
               left: $day-size*0.5
             &.day2
               background: -webkit-radial-gradient(50% 50%, circle closest-side, #57c6e1 0%, #b49fda 0%, #7ac5d8 0%, #eea2a2 0%, #b1aff0 0%, #836df0 100%)
-              @include absolute-ne
-              top: 6rem
-              left: 15rem
-              @media (max-width: $breakpoint-tab-4)
-                position: static
+              top: $day-size*0.4
+              left: $day-size*1.2
 
 section.agenda
   .container
@@ -158,8 +152,6 @@ section.agenda
       .session
         @include spread
         flex-direction: row
-        // border: 1px dotted $neutral-light
-        // height: 10rem
         @media (max-width: $breakpoint-tab-portrait)
           border: 1px solid $neutral-light
           display: block
@@ -176,7 +168,6 @@ section.agenda
       position: relative
       padding: $space*3 $space*1.5
       background: $event-red
-      // text-align: center
       flex: 0 0 20%
       max-width: 20%
       @media (max-width: $breakpoint-tab-portrait)
@@ -188,7 +179,6 @@ section.agenda
 
       h4
         color: $white
-        // margin-top: $space*3
         @media (max-width: $breakpoint-tab-4)
           margin-top: 0
       h6
@@ -215,7 +205,6 @@ section.agenda
           width:  $space*5
           height:  $space*5
           border-radius: 50%
-          // margin-right: $space*2
           @media (max-width: $breakpoint-tab-4)
             display: none
 section.agenda
@@ -231,7 +220,6 @@ section.agenda
 
           span
             color: $neutral-light !important
-            // margin-left: $space*10
         p
           padding-top: $space*2
           color: $neutral-light !important
