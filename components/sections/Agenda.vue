@@ -142,8 +142,8 @@ section.agenda
               left: $day-size*0.5
             &.day2
               background: -webkit-radial-gradient(50% 50%, circle closest-side, #57c6e1 0%, #b49fda 0%, #7ac5d8 0%, #eea2a2 0%, #b1aff0 0%, #836df0 100%)
-              top: $day-size*0.4
-              left: $day-size*1.2
+              top: $day-size*0.5
+              left: $day-size*1
 
 section.agenda
   .container

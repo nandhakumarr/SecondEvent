@@ -81,3 +81,14 @@ section.speakers
   left: 5rem
 </style>
 
+
+# Responsive
+<style lang="sass" scoped>
+@import 'assets/styles/includes'
+section.speakers
+  .speakers-list
+    .speaker-img
+      @media (max-width: $breakpoint-minitab)
+        margin: auto 6rem 1.2rem !important
+</style>
+

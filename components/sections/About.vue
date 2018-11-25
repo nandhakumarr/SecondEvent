@@ -46,8 +46,6 @@ section.about
       margin-right: 15px
       margin-left: 15px
       .text
-        max-width: 33.33%
-        flex: 1
         .intro-text
           background: $white
           box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.08)
@@ -101,7 +99,35 @@ section.about
 </style>
 
 <style lang="sass" scoped>
+@import 'assets/styles/includes'
 section.about
+  @media (max-width: $breakpoint-tab-4)
+    background-image: none
   .intro
     display: block
+    .text
+      @media (min-width: $breakpoint-tab-4)
+        max-width: 33.33%
+        flex: 1
+      .intro-text
+        @media (max-width: $breakpoint-minitab)
+          // padding-bottom: $space*2 !important
+          margin-bottom: $space !important
+    .video
+      .intro-video
+        @media (max-width: $breakpoint-mobile)
+          border-radius: 0 !important
+          margin-left: -2rem !important
+        @media (max-width: $breakpoint-minitab)
+          border-radius: 0 !important
+          margin-left: -2rem !important
+        @media (min-width: 600px) and (max-width: 767px)
+          border-radius: 0 !important
+          margin-left:  4rem !important
+        @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
+          border-radius: 0 !important
+          margin-left: 5rem !important
+          img
+            max-width: 100%
+            height: 100%
 </style>

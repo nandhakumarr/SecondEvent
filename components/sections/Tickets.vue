@@ -58,6 +58,12 @@ section.tickets
       .pricing-item
         position: relative
         text-align: center
+        @media (max-width: $breakpoint-mobile)
+          margin-bottom: $space*3
+        @media (max-width: $breakpoint-tab-1)
+          margin-left: $space*3.5
+          &:last-child
+            margin-top: $space*3.5
         .pricing-box
           background: $white
           padding: $space*2.5
