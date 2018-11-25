@@ -155,30 +155,26 @@ section.agenda
         // height: 20rem
         // @media (max-width: $breakpoint-tab-4)
         //   height: 25rem
-        // @media (max-width: $breakpoint-tab-portrait)
-        //   border: 1px solid $neutral-light
-        //   display: block
-        //   margin-left: auto
-        //   margin-right: auto
-          // height: 20rem
-          // width: 30rem
+        @media (max-width: $breakpoint-tab-portrait)
+          border: 1px solid $neutral-light
+          display: block
 section.agenda
   .container
     .time
-      margin-right: 2rem
       width: $space*11
-      // height: 10rem
+      height: 10rem
       position: relative
       padding: $space*3 $space*1.5
       background: $event-red
-      flex: 0 0 20%
-      max-width: 20%
+      @media (min-width: $breakpoint-desktop)
+        flex: 0 0 20%
+        max-width: 20%
       @media (max-width: $breakpoint-tab-portrait)
         width: 100%
         height: 7rem
-        padding: 1.5rem
-        margin: 0
-        text-align: left
+      @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
+        height: 13rem
+        width: 50%
 
       h4
         color: $white
@@ -196,9 +192,15 @@ section.agenda
       border-left: none
       width: 100%
       @include flex
-      @media (max-width: $breakpoint-tab-4)
+      @media (max-width: $breakpoint-tab-portrait)
         display: block
         width: 100%
+        height: 15rem
+      @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
+        height: 13rem
+        width: 50%
+        padding: 0
+
 section.agenda
   .container
     .sessions
@@ -239,6 +241,11 @@ span.lunch
   @include absolute-nw
   left: 15rem
   margin-top: $space*3
+  @media (max-width: $breakpoint-tab-portrait)
+    left: 5rem
+    display: block
+  @media (max-width: $breakpoint-tab-4)
+    left: 6rem
 
 span.lunch
   margin-left: $space*10
