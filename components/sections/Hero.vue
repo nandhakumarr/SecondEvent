@@ -5,11 +5,21 @@ section.hero
       p 5 to 7 June 2019, Waterfront Hotel, London
       h1 Digital Thinkers MeetUp
       .timer
+      day-counter
       .cta
         a.btn Buy Ticket
     .banner-img
       img(src="/images/banner-img.png", height="720")
 </template>
+
+<script>
+import DayCounter from '~/components/common/DayCounter'
+export default {
+  components: {
+    DayCounter
+  }
+}
+</script>
 
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
@@ -22,7 +32,7 @@ section.hero
   height: 800px
   overflow: hidden
   .container
-    @include spread
+    @include flex
     .banner-content
       margin-bottom: $space*15
       @media (max-width: $breakpoint-mobile)
