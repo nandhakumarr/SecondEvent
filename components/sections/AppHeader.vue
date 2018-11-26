@@ -1,33 +1,48 @@
 <template lang="pug">
-section.app-header(:class="{dark: isScroll, show: show}")
+section.app-header(:class="{dark: isScroll, open: open}")
   .container
     a.logo
       img(src="/images/logo.png")
     a.hamburger(@click="toggle()")
       img(src="/images/menu.png")
-    nav.navigation(:class="{show: show}")
-      .primary
-        a(href="#", v-scroll-to="'.hero'") home
-        a(href="#", v-scroll-to="'.about'") about
-        a(href="#", v-scroll-to="'.speakers'") speakers
-        a(href="#", v-scroll-to="'.agenda'") schedule
-        a(href="#", v-scroll-to="'.blog'") blog
-        a(href="#", v-scroll-to="'.app-footer'") contact
-        a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
+    navigation(:open= "open")
+    //- nav.navigation(:class="{open: open}")
+    //-   //- .primary
+    //-     //- a(href="#", v-scroll-to="'.hero'") home
+    //-     //-   a.dropdown_content(v-for="h in head") {{ h.field }}
+    //-     //- a(href="#", v-scroll-to="'.about'") about
+    //-     //- a(href="#", v-scroll-to="'.speakers'") speakers
+    //-     //- a(href="#", v-scroll-to="'.agenda'") schedule
+    //-     //- a(href="#", v-scroll-to="'.blog'") blog
+    //-     //- a(href="#", v-scroll-to="'.app-footer'") contact
+    //-     //- a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
+    //-   ul.primary
+    //-     li(v-for="item, i in navigation.primary", :key="i")
+    //-       a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
+    //-       span(v-if="item.children") :::
+    //-       ul.dropdown-content(v-if="item.children")
+    //-         li(v-for="child, i in item.children", :key="i") 
+    //-           nuxt-link(:to="child.url") {{ child.label }}
+    //-     li
+    //-       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
 
 </template>
 
 <script>
 import Vue from 'vue'
 import vueScrollTo from 'vue-scroll-to'
-
+// import navigation from 'static/seed/navigation'
+import Navigation from '~/components/sections/Navigation.vue'
 Vue.use(vueScrollTo)
 export default {
   data () {
     return {
       isScroll: false,
-      show: false
+      open: false
     }
+  },
+  components:{
+    Navigation
   },
   created () {
     if (process.client)
@@ -41,10 +56,10 @@ export default {
       this.isScroll = window.scrollY >= 100
     },
     toggle(){
-      this.show = !this.show
+      this.open = !this.open
     },
     hide () {
-      this.show = false
+      this.open = false
     }
   }
 }
@@ -87,5 +102,10 @@ section
   width: 100%
   height: auto
   padding: $space*2.7 0
+
+section.app-header
+  .container
+    overflow: visible
+  
 </style>
 
