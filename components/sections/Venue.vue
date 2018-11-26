@@ -23,6 +23,15 @@ section.venue
                 label Name: {{ s.p_name }}
                 label Phone: {{ s.p_phone }}
                 label Email:  {{ s.p_mail }}
+    .venue-map
+        iframe(
+          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=marina%20bay+(Your%20Business%20Name)&ie=UTF8&t=&z=17&iwloc=B&output=embed"
+          frameborder="0"
+          scrolling="yes"
+          marginheight="0"
+          marginwidth="0"
+        )            
+
             
 </template>
 
@@ -90,6 +99,8 @@ section.venue
             .program-details
               @media (min-width: $breakpoint-tab-1)
                 margin-left: $space*2
+    .venue-map
+      width: 100%            
 
 
 </style>

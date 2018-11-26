@@ -10,6 +10,7 @@
   sponsors
   venue
   app-header
+  book-seat
   app-footer
   .back-to
     a(href="#", v-scroll-to="'.hero'")
@@ -29,7 +30,7 @@ import Sponsors from '~/components/sections/Sponsors.vue'
 import Venue from '~/components/sections/Venue.vue'
 import AppHeader from '~/components/sections/AppHeader.vue'
 import AppFooter from '~/components/sections/AppFooter.vue'
-
+import BookSeat from '~/components/sections/bookSeat.vue'
 export default {
   components: {
     Hero,
@@ -42,7 +43,8 @@ export default {
     Sponsors,
     Venue,
     AppHeader,
-    AppFooter
+    AppFooter,
+    BookSeat
   }
 }
 </script>
