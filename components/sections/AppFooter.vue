@@ -6,7 +6,7 @@ section.app-footer
         span SUBSCRIBE TO NEWSLETTER
         h2 Want something extra?
       .section-form
-        input(type="text" placeholder="Your Email")
+        input(id="mail"  type="text" placeholder="Your Email")
         button.btn Subscribe
     .footer  
       .social-media
@@ -73,12 +73,16 @@ section.app-footer
         @include flex
         align-items: flex-end
         margin: $space
+        color: $white
         input
-          width: 80%
+          width: 100%
           border: none
+          margin: 0 auto
           border-bottom: 1px solid #6f55b0
           background: none
           padding: 1rem
+          #mail
+            color: $white
         .btn
           @media (max-width: $breakpoint-tab-1)
             padding: 0 $space    
