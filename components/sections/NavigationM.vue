@@ -49,42 +49,16 @@ export default {
   ul.primary
     @include reset-space
     .dropdown-content
-      background: #FFF
+      // background: #FFF
       a
-        color: #333
-        
-
-  // ul.primary > li.active
-  //   > ul.dropdown-content
-  //     display: block
-  //     @include reset-space
-  //     li
-  //       background: #ddd
-  //       a
-  //         color: black
-  //         padding: $space/2 $space/4 
-  //         text-decoration: none
-  //         display: block
-
-// .navigator
-//   ul.primary
-//     li
-//       &.active
-//         ul.dropdown-content
-//           li
-//             display: block
-//             @include reset-space
-
-
-
-
+        color: white
 .navigator
   .primary
     li span
       @include spread
-      
-         
-
+      a 
+        img 
+          color: white
 .navigator
   a
     margin: $space
@@ -105,7 +79,7 @@ export default {
       li
         width: 100%
         padding: $space/2
-        background: green
+        background: #222222
         a.btn.btn-primary
           width: 90%
 

@@ -1,5 +1,6 @@
 <template lang="pug">
 .page
+  app-header
   hero
   about
   speakers
@@ -9,7 +10,6 @@
   blog
   sponsors
   venue
-  app-header
   book-seat
   app-footer
   .back-to
@@ -51,7 +51,10 @@ export default {
 
 <style>
 
+body {
+  background: #333
 
+}
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

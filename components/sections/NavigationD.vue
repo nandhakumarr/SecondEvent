@@ -3,7 +3,7 @@ nav.navigator(:class="{open: open}")
   ul.primary
     li(v-for="item, i in navigation.primary", :key="i")
       a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
-      span(v-if="item.children") :::
+       img(v-if="item.children", src="/images/dropdown.png")
       ul.dropdown-content(v-if="item.children")
         li(v-for="child, i in item.children", :key="i") 
           nuxt-link(:to="child.url") {{ child.label }}
@@ -66,21 +66,7 @@ export default {
     text-decoration: none
   @media (max-width: 960px)
     display: none
-  &.open
-    display: block
-    @include fixed-sw
-    top: 6rem
-    left: auto
-    rigth: auto
-    width: 90%
-    ul.primary  
-      flex-direction: column  
-      li
-        width: 100%
-        padding: $space
-        background: crimson
-        a.btn.btn-primary
-          width: 90%
+  
 
       
 
