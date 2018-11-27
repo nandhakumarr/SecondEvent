@@ -5,12 +5,33 @@ section.speakers
       span Listen to The
       h2 Event Speakers
     main
-      .speakers-list(v-for="(s, i) in data", key="i")
+      .speakers-list(v-for="(s, i) in data", key="i" @click="select(i)" :class="[{ 'selected': selected === i }]")
         .speaker-img
           img(:src="s.image")
         .speaker-info
           h3 {{ s.name }}
           p {{ s.designation }}
+      .speaker-modal(v-if="selected")
+        .modal-content
+          .mspeaker-img
+            img(:src="selected.image")
+          .mspeaker-info
+            h3 {{ selected.name }}
+            p {{ selected.designation }}
+            img(:src="selected.logo")
+            p {{ selected.content }}
+            h4 Session by {{ selected.name }}
+            .sessions
+              .day1
+                h4 Day1
+                p {{ selected.time }}
+                span {{ selected.topic }}
+              .day2
+                h4 Day2
+                p {{ selected.time }}
+                span {{ selected.topic }}
+          button
+            img(src="/images/close.png", @click="deselect()")     
 
     img.memphis1(src="/images/home-speaker-memphis1.png")
     img.memphis2(src="/images/home-speaker-memphis2.png")
@@ -22,8 +43,17 @@ import speaker from 'static/seed/speakers'
 export default {
   data () {
     return {
-      data: speaker
+      data: speaker,
+      selected: null
     }
+  },
+  methods: {
+      select(i){
+        this.selected = this.data[i]
+      },
+      deselect() {
+        this.selected = null
+      }
   }
 }
 </script>
@@ -93,4 +123,51 @@ section.speakers
       @media (max-width: $breakpoint-minitab)
         margin: auto 6rem 1.2rem !important
 </style>
+
+#Modal
+<style lang="sass" scoped>
+@import 'assets/styles/includes'
+section.speakers
+  .speakers-list
+    position: relative 
+  .speaker-modal
+    @include fixed
+    @include flex
+    background: #f4f4f4
+    z-index: 100
+    max-width: $page-width
+    margin: auto
+    align-items: flex-start
+    height: 35rem
+    overflow: auto
+    @media (max-width: $breakpoint-tab-3)
+      height: 
+    .modal-content
+      @include flex
+      align-items: flex-start
+      text-align: left
+      @media (max-width: $breakpoint-tab-3)
+        display: block
+        
+      .mspeaker-info
+        padding: $space*3
+      p
+        color: $neutral-light
+      h4
+        color: $black  
+      span
+        color: #e7015e  
+      .sessions
+        @include flex
+        justify-content: flex-start
+        .day2
+          margin-left: $space*3
+    button
+      border: none     
+      padding: $space
+      cursor: pointer
+    
+</style>
+
+
 
