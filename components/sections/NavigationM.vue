@@ -65,15 +65,16 @@ export default {
   a.btn.btn-primary
     font-size: 0.9rem
     text-decoration: none
-  @media (max-width: 960px)
+  @media (max-width: $breakpoint-tab-5)
     display: none
   &.open
     display: block
     @include fixed-sw
-    top: 6rem
-    left: auto
-    rigth: auto
+    top: 4rem
+    left: 3rem
+    rigth: 3rem
     width: 90%
+    // margin: 0 auto
     ul.primary  
       flex-direction: column  
       li

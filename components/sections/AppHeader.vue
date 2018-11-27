@@ -64,7 +64,7 @@ section.app-header
       // ::after
       //   content: '\f107'
 
-      @media (max-width: 960px)
+      @media (max-width: $breakpoint-tab-5)
         display: none
       &.open 
         display: block
@@ -73,7 +73,7 @@ section.app-header
     a.hamburger
       margin-right: $space*2
       @incliude fixed
-      @media (min-width: 960px)
+      @media (min-width: $breakpoint-tab-5)
         display: none
      
 
@@ -100,10 +100,10 @@ section.app-header
 section.app-header
   .container
     .desktop
-      @media (max-width: $breakpoint-tab-3)    
+      @media (max-width: $breakpoint-tab-5)    
         display: none
     .mobile
-      @media (min-width: $breakpoint-tab-3)    
+      @media (min-width: $breakpoint-tab-5)    
         display: none
 </style>
 

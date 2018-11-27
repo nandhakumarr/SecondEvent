@@ -64,7 +64,7 @@ export default {
   a.btn.btn-primary
     font-size: 0.9rem
     text-decoration: none
-  @media (max-width: 960px)
+  @media (max-width: $breakpoint-tab-5)
     display: none
   
 
