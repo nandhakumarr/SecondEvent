@@ -5,34 +5,16 @@ section.app-header(:class="{dark: isScroll, open: open}")
       img(src="/images/logo.png")
     a.hamburger(@click="toggle()")
       img(src="/images/menu.png")
-    navigation(:open= "open")
-    //- nav.navigation(:class="{open: open}")
-    //-   //- .primary
-    //-     //- a(href="#", v-scroll-to="'.hero'") home
-    //-     //-   a.dropdown_content(v-for="h in head") {{ h.field }}
-    //-     //- a(href="#", v-scroll-to="'.about'") about
-    //-     //- a(href="#", v-scroll-to="'.speakers'") speakers
-    //-     //- a(href="#", v-scroll-to="'.agenda'") schedule
-    //-     //- a(href="#", v-scroll-to="'.blog'") blog
-    //-     //- a(href="#", v-scroll-to="'.app-footer'") contact
-    //-     //- a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
-    //-   ul.primary
-    //-     li(v-for="item, i in navigation.primary", :key="i")
-    //-       a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
-    //-       span(v-if="item.children") :::
-    //-       ul.dropdown-content(v-if="item.children")
-    //-         li(v-for="child, i in item.children", :key="i") 
-    //-           nuxt-link(:to="child.url") {{ child.label }}
-    //-     li
-    //-       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
+    NavigationD.desktop(:open="open")
+    NavigationM.mobile(:open="open")
 
 </template>
 
 <script>
 import Vue from 'vue'
 import vueScrollTo from 'vue-scroll-to'
-// import navigation from 'static/seed/navigation'
-import Navigation from '~/components/sections/Navigation.vue'
+import NavigationD from '~/components/sections/NavigationD.vue'
+import NavigationM from '~/components/sections/NavigationM.vue'
 Vue.use(vueScrollTo)
 export default {
   data () {
@@ -42,7 +24,8 @@ export default {
     }
   },
   components:{
-    Navigation
+    NavigationD,
+    NavigationM
   },
   created () {
     if (process.client)
@@ -58,9 +41,6 @@ export default {
     toggle(){
       this.open = !this.open
     },
-    hide () {
-      this.open = false
-    }
   }
 }
 </script>
@@ -69,15 +49,13 @@ export default {
 @import 'assets/styles/includes'
 
 
-section
+section.app-header
   .container
     @include fixed-n
-    top: $space*-1.2
     @include flex
+    top: $space*-1.2
     background: transparent
-    .navigation
-      a
-        margin: $space
+    navigationd
       a.btn.btn-primary
         font-size: 0.9rem
       // ::after
@@ -88,10 +66,20 @@ section
 
       @media (max-width: 960px)
         display: none
+      &.open 
+        display: block
+      
+      
     a.hamburger
       margin-right: $space*2
+      @incliude fixed
       @media (min-width: 960px)
         display: none
+     
+
+
+
+        
 
 //Sticky
 .app-header.dark
@@ -106,6 +94,16 @@ section
 section.app-header
   .container
     overflow: visible
-  
+
+
+
+section.app-header
+  .container
+    .desktop
+      @media (max-width: $breakpoint-tab-3)    
+        display: none
+    .mobile
+      @media (min-width: $breakpoint-tab-3)    
+        display: none
 </style>
 
