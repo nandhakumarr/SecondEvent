@@ -1,11 +1,11 @@
 <template lang="pug">
 nav.navigator(:class="{open: open}")
   ul.primary
-    li(v-for="item, i in navigation.primary" :key="i")
+    li(v-for="item, i in navigation.primary" :key="i" @click="select(i)" :class="[{'selected': selected === i}]")
       a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
-      img(v-if="item.children", src="/images/dropdown.png", @click="display()" )
+      img(v-if="item.children", src="/images/dropdown.png")
       ul.dropdown-content(v-if="item.children")
-        li(v-for="child, i in item.children", :key="i") 
+        li(v-if="selected" v-for="child, i in item.children", :key="i") 
           nuxt-link(:to="child.url") {{ child.label }}
     li
       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
@@ -18,7 +18,7 @@ export default {
     open: {
       type: Boolean,
       required: true,
-      show: false
+      selected: null
     }
   },
   data(){
@@ -27,9 +27,9 @@ export default {
     }
   },
   methods:{
-    display(){
-      this.show = !this.show
-    }
+   select(i){
+     this.selected = i
+   }
   }
 }
 </script>
@@ -45,14 +45,15 @@ export default {
     @include reset-space
     position: relative
     .dropdown-content
-      display: none
+      // display: none
       position: absolute
       background: #FFF
       z-index: 100000
       a
         color: #333
+        
 
-  // ul.primary > li.show
+  // ul.primary > li.active
   //   > ul.dropdown-content
   //     display: block
   //     @include reset-space
@@ -64,11 +65,23 @@ export default {
   //         text-decoration: none
   //         display: block
 
+// .navigator
+//   ul.primary
+//     li
+//       &.active
+//         ul.dropdown-content
+//           li
+//             display: block
+//             @include reset-space
+
+
+
+
 .navigator
   .primary
     li
       @include spread
-    
+      
          
 
 .navigator
