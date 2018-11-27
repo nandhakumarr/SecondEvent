@@ -1,11 +1,12 @@
 <template lang="pug">
 nav.navigator(:class="{open: open}")
   ul.primary
-    li(v-for="item, i in navigation.primary" :key="i" @click="select(i)" :class="[{'selected': selected === i}]")
-      a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
-      img(v-if="item.children", src="/images/dropdown.png")
-      ul.dropdown-content(v-if="item.children")
-        li(v-if="selected" v-for="child, i in item.children", :key="i") 
+    li(v-for="item, i in navigation.primary" :key="i" @click="select(i)" :class="[{'selected': isSelected === i}]")
+      span
+        a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
+        img(v-if="item.children", src="/images/dropdown.png")
+      ul.dropdown-content(v-if="isSelected(i)")
+        li(v-for="child, i in item.children", :key="i") 
           nuxt-link(:to="child.url") {{ child.label }}
     li
       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
@@ -18,17 +19,22 @@ export default {
     open: {
       type: Boolean,
       required: true,
-      selected: null
     }
   },
   data(){
     return{
+      selected: null,
       navigation: navigation
     }
   },
   methods:{
-   select(i){
-     this.selected = i
+   select(i) {
+     this.selected = this.selected === i
+     ? null
+     : i
+   },
+   isSelected (i) {
+     return this.selected === i
    }
   }
 }
@@ -41,14 +47,9 @@ export default {
 .navigator
   overflow: visible
   ul.primary
-    @include stack-l
     @include reset-space
-    position: relative
     .dropdown-content
-      // display: none
-      position: absolute
       background: #FFF
-      z-index: 100000
       a
         color: #333
         
@@ -79,7 +80,7 @@ export default {
 
 .navigator
   .primary
-    li
+    li span
       @include spread
       
          
