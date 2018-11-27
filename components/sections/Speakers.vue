@@ -11,6 +11,7 @@ section.speakers
         .speaker-info
           h3 {{ s.name }}
           p {{ s.designation }}
+
     img.memphis1(src="/images/home-speaker-memphis1.png")
     img.memphis2(src="/images/home-speaker-memphis2.png")
     img.memphis3(src="/images/home-speaker-memphis3.png")
@@ -36,6 +37,7 @@ section.speakers
   min-height: 100vh
   padding-bottom: $space*4
   position: relative
+  
   .container
     header
       position: relative
