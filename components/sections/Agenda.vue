@@ -56,6 +56,7 @@ $day-size-tab: 15rem
 
 
 section.agenda
+  background: #FFF
   .container
     min-height: 100vh
     .head
