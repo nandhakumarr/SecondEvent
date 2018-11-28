@@ -33,7 +33,7 @@ section.speakers
                 span {{ selected.time }}
                 p {{ selected.topic }}
           button
-            img(src="https://img.icons8.com/ios/48/000000/plus.png" @click="deselect()")
+            img(src="https://img.icons8.com/metro/48/000000/multiply.png" @click="deselect()")
     img.memphis1(src="/images/home-speaker-memphis1.png")
     img.memphis2(src="/images/home-speaker-memphis2.png")
     img.memphis3(src="/images/home-speaker-memphis3.png")
@@ -94,9 +94,8 @@ section.speakers
               transition: all 0.5s ease
               filter: grayscale(60%)
             .plus-image
-              opacity: 1
-          
-              
+              height: 60%
+              opacity: 1     
         .speaker-img
           border-radius: 50%
           width: 15rem
@@ -106,12 +105,12 @@ section.speakers
           overflow: hidden
           img
             width: 100%
-  
           .plus-image
-            @include absolute    
-            width: 4rem
-            height: 4rem
+            @include absolute-s
             opacity: 0
+            width: 4rem
+            height: 0
+            transition: .6s ease
         .speaker-info
           p
             color: $neutral-light
