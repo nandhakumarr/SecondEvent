@@ -70,7 +70,8 @@ section.app-footer
           color: $white
       .section-form
         @include flex
-        align-items: flex-end
+        align-items: flex-start
+        justify-content: center
         margin: $space
         color: $white
         input

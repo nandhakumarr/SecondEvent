@@ -33,7 +33,7 @@ import AppHeader from '~/components/sections/AppHeader.vue'
 import AppFooter from '~/components/sections/AppFooter.vue'
 import BookSeat from '~/components/sections/bookSeat.vue'
 export default {
-  components: {
+components: {
     Hero,
     About,
     Speakers,
