@@ -42,6 +42,7 @@ section.hero
       margin-bottom: $space*15
       @media (max-width: $breakpoint-mobile)
         margin-bottom: $space*5
+        width: 20rem
       h1
         text-transform: uppercase
         margin-bottom: $space*3.5
@@ -58,5 +59,12 @@ section.hero
         vertical-align: middle
       @media (max-width: $breakpoint-tab-1)
         display: none
+// section.hero
+//   .container
+//     .banner-content
+//       .timer
+//         @media (max-width: $breakpoint-mobile)
+//           width: 25rem
+
 </style>
 

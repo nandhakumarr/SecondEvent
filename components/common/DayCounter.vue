@@ -61,6 +61,9 @@ $metric-size: 7rem
     margin-bottom: $space*2
     @media (max-width: $breakpoint-minitab)
       margin-left: $space*-2.7
+    @media (min-width: $breakpoint-mobile)
+      margin-left: 0.2rem
+      flex-wrap: wrap
     .block
       margin: $space
       text-align: center
@@ -71,30 +74,30 @@ $metric-size: 7rem
         border: 3px solid $days
         border-radius: 50%
         padding: $space*2.2
-        @media (max-width: $breakpoint-minitab)
-          border: none
-          border-radius: 0
+        // @media (max-width: $breakpoint-minitab)
+        //   border: none
+        //   border-radius: 0
       .hours
         border: 3px solid $hours
         border-radius: 50%
         padding: $space*2
-        @media (max-width: $breakpoint-minitab)
-          border: none
-          border-radius: 0
+        // @media (max-width: $breakpoint-minitab)
+        //   border: none
+        //   border-radius: 0
       .minutes
         border: 3px solid $minutes
         border-radius: 50%
         padding: $space*2
-        @media (max-width: $breakpoint-minitab)
-          border: none
-          border-radius: 0
+        // @media (max-width: $breakpoint-minitab)
+        //   border: none
+        //   border-radius: 0
       .seconds
         border: 3px solid $seconds
         border-radius: 50%
         padding: $space*2
-        @media (max-width: $breakpoint-minitab)
-          border: none
-          border-radius: 0
+        // @media (max-width: $breakpoint-minitab)
+        //   border: none
+        //   border-radius: 0
 
 p.label
   font-size: 10px
