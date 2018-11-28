@@ -24,15 +24,14 @@ section.speakers
             .sessions
               .day1
                 h4 Day1
-                p {{ selected.time }}
-                span {{ selected.topic }}
+                span {{ selected.time }}
+                p {{ selected.topic }}
               .day2
                 h4 Day2
-                p {{ selected.time }}
-                span {{ selected.topic }}
+                span {{ selected.time }}
+                p {{ selected.topic }}
           button
-            img(src="/images/close.png", @click="deselect()")     
-
+            img(src="https://img.icons8.com/ios-glyphs/48/000000/multiply.png" @click="deselect()")
     img.memphis1(src="/images/home-speaker-memphis1.png")
     img.memphis2(src="/images/home-speaker-memphis2.png")
     img.memphis3(src="/images/home-speaker-memphis3.png")
@@ -140,32 +139,41 @@ section.speakers
     align-items: flex-start
     height: 35rem
     overflow: auto
-    @media (max-width: $breakpoint-tab-3)
-      height: 
     .modal-content
       @include flex
       align-items: flex-start
       text-align: left
       @media (max-width: $breakpoint-tab-3)
-        display: block
-        
+        display: block    
       .mspeaker-info
         padding: $space*3
       p
-        color: $neutral-light
-      h4
+        color: $neutral-light    
+      h4, span
         color: $black  
-      span
-        color: #e7015e  
+      p, h4, h3, 
+        padding-bottom: $space 
       .sessions
         @include flex
         justify-content: flex-start
+        .day1, .day2
+          h4
+            padding: 0rem
+        p
+          color: #e7015e  
+        span
+          color: $neutral-light    
+          font-weight: bold  
         .day2
           margin-left: $space*3
+
     button
       border: none     
       padding: $space
       cursor: pointer
+      background: none
+      img
+        width: $space*1.5
     
 </style>
 

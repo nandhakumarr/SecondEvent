@@ -104,10 +104,12 @@ section.tickets
   height: 10px
   background: #ebedf4
   margin-bottom: $space*1.5
+  border-radius: 5px
   .progress-inner
     margin-bottom: $space
     background-image: linear-gradient(144deg, #321575 0%, #8d0b93 51%, #ff0066 100%, #ff057c 100%)
     height: 100%
+    border-radius: 5px
     &.regular
       width: 75%
     &.platinum

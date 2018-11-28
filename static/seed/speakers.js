@@ -22,7 +22,7 @@ export default [
     name: 'Agaton Johnsson',
     designation: 'Developer Expert',
     logo: '/images/speaker-logo.png',
-    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expressionWorld is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
+    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
     time: '10.30 - 11.30 am',
     topic: 'Marketing Matters'
   },
@@ -31,7 +31,7 @@ export default [
     name: 'Rebecca Henrikon',
     designation: 'Founder, Cards',
     logo: '/images/speaker-logo.png',
-    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expressionWorld is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
+    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
     time: '10.30 - 11.30 am',
     topic: 'Marketing Matters'
   },
@@ -40,7 +40,7 @@ export default [
     name: 'Fredric Martinsson',
     designation: 'Founder, Edilta',
     logo: '/images/speaker-logo.png',
-    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expressionWorld is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
+    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
     time: '10.30 - 11.30 am',
     topic: 'Marketing Matters'
   },
@@ -49,7 +49,7 @@ export default [
     name: 'Lundryn Melisa',
     designation: 'Lead Designer, Payol',
     logo: '/images/speaker-logo.png',
-    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expressionWorld is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
+    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
     time: '10.30 - 11.30 am',
     topic: 'Marketing Matters'
   },
@@ -58,7 +58,7 @@ export default [
     name: 'Johnsson Agaton',
     designation: 'Developer Expert',
     logo: '/images/speaker-logo.png',
-    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expressionWorld is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
+    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
     time: '10.30 - 11.30 am',
     topic: 'Marketing Matters'
   },
@@ -67,7 +67,7 @@ export default [
     name: 'Henrikon Rebecca',
     designation: 'Founder, Cards',
     logo: '/images/speaker-logo.png',
-    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expressionWorld is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
+    content: 'World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression',
     time: '10.30 - 11.30 am',
     topic: 'Marketing Matters'
   }
