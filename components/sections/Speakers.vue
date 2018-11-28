@@ -5,9 +5,11 @@ section.speakers
       span Listen to The
       h2 Event Speakers
     main
-      .speakers-list(v-for="(s, i) in data", :key="i" @click="select(i)" :class="[{ 'selected': selected === i }]")
+      .speakers-list(v-for="(s, i) in data", :key="i" :class="[{ 'selected': selected === i }]")
         .speaker-img
           img(:src="s.image")
+          .plus-image(@click="select(i)")
+            img(src="https://img.icons8.com/ios/48/cccccc/plus.png")
         .speaker-info
           h3 {{ s.name }}
           p {{ s.designation }}
@@ -31,7 +33,7 @@ section.speakers
                 span {{ selected.time }}
                 p {{ selected.topic }}
           button
-            img(src="https://img.icons8.com/ios-glyphs/48/000000/multiply.png" @click="deselect()")
+            img(src="https://img.icons8.com/ios/48/000000/plus.png" @click="deselect()")
     img.memphis1(src="/images/home-speaker-memphis1.png")
     img.memphis2(src="/images/home-speaker-memphis2.png")
     img.memphis3(src="/images/home-speaker-memphis3.png")
@@ -85,6 +87,16 @@ section.speakers
       flex-wrap: wrap
       .speakers-list
         margin: $space
+        &:hover
+          .speaker-img
+            img
+              transform: scale(1.2)
+              transition: all 0.5s ease
+              filter: grayscale(60%)
+            .plus-image
+              opacity: 1
+          
+              
         .speaker-img
           border-radius: 50%
           width: 15rem
@@ -92,15 +104,18 @@ section.speakers
           position: relative
           margin: auto auto 1.2rem
           overflow: hidden
-          &:hover
-            transform: scale(1)
-            transition: all 0.4s ease
           img
             width: 100%
+  
+          .plus-image
+            @include absolute    
+            width: 4rem
+            height: 4rem
+            opacity: 0
         .speaker-info
           p
             color: $neutral-light
-
+      
 //Extras Images
 .memphis1
   @include absolute-nw
