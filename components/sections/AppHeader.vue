@@ -66,20 +66,20 @@ section.app-header
 
       @media (max-width: $breakpoint-tab-5)
         display: none
-      &.open 
+      &.open
         display: block
-      
-      
+
+
     a.hamburger
       margin-right: $space*2
       @incliude fixed
       @media (min-width: $breakpoint-tab-5)
         display: none
-     
 
 
 
-        
+
+
 
 //Sticky
 .app-header.dark
@@ -100,10 +100,10 @@ section.app-header
 section.app-header
   .container
     .desktop
-      @media (max-width: $breakpoint-tab-5)    
+      @media (max-width: $breakpoint-tab-5)
         display: none
     .mobile
-      @media (min-width: $breakpoint-tab-5)    
+      @media (min-width: $breakpoint-tab-5)
         display: none
 </style>
 

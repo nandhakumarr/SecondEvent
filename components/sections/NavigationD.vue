@@ -3,9 +3,10 @@ nav.navigator(:class="{open: open}")
   ul.primary
     li(v-for="item, i in navigation.primary", :key="i")
       a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
-       img(v-if="item.children", src="/images/dropdown.png")
+        span
+          img(v-if="item.children", src="/images/dropdown.png")
       ul.dropdown-content(v-if="item.children")
-        li(v-for="child, i in item.children", :key="i") 
+        li(v-for="child, i in item.children", :key="i")
           nuxt-link(:to="child.url") {{ child.label }}
     li
       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
@@ -53,10 +54,10 @@ export default {
         background: #ddd
         a
           color: black
-          padding: $space/2 $space/4 
+          padding: $space/2 $space/4
           text-decoration: none
           display: block
-          
+
 
 .navigator
   a
@@ -66,12 +67,5 @@ export default {
     text-decoration: none
   @media (max-width: $breakpoint-tab-5)
     display: none
-  
-
-      
-
-
-
-
 
 </style>
