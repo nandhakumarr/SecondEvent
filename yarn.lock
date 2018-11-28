@@ -1228,7 +1228,6 @@ babel-plugin-transform-vue-jsx@^4.0.1:
 babel-runtime@^5.8.0:
   version "5.8.38"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-5.8.38.tgz#1c0b02eb63312f5f087ff20450827b425c9d4c19"
-  integrity sha1-HAsC62MxL18If/IEUIJ7QlydTBk=
   dependencies:
     core-js "^1.0.0"
 
@@ -1917,7 +1916,6 @@ copy-descriptor@^0.1.0:
 core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
-  integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
 
 core-js@^2.4.0, core-js@^2.5.7:
   version "2.5.7"
@@ -1945,10 +1943,9 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-"countdown@>= 2.3.0", countdown@^2.6.0:
+countdown@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/countdown/-/countdown-2.6.0.tgz#677fb8e3a9d4cc4e76415901ba253b518af34177"
-  integrity sha1-Z3+446nUzE52QVkBuiU7UYrzQXc=
 
 create-ecdh@^4.0.0:
   version "4.0.3"
@@ -3865,7 +3862,6 @@ map-visit@^1.0.0:
 marker-clusterer-plus@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/marker-clusterer-plus/-/marker-clusterer-plus-2.1.4.tgz#f8eff74d599dab3b7d0e3fed5264ea0e704f5d67"
-  integrity sha1-+O/3TVmdqzt9Dj/tUmTqDnBPXWc=
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -4039,19 +4035,6 @@ mixin-object@^2.0.1:
   resolved "http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-moment-countdown@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/moment-countdown/-/moment-countdown-0.0.3.tgz#93100c92aa6fd884b84a83814ebdcd6b87f3388d"
-  integrity sha1-kxAMkqpv2IS4SoOBTr3Na4fzOI0=
-  dependencies:
-    countdown ">= 2.3.0"
-    moment ">= 2.0.0"
-
-"moment@>= 2.0.0", moment@^2.22.2:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -6734,7 +6717,6 @@ vue-template-es2015-compiler@^1.6.0:
 vue2-google-maps@^0.10.3:
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/vue2-google-maps/-/vue2-google-maps-0.10.3.tgz#ad0be5548b89bbd07ce7697999bcd7c784fc47de"
-  integrity sha512-uEo08ZjZm6oIrxaxbJ8LKw6P6V/LMFg31mqeEidJM+1Z8maQY4SILHX3X04z7lLk0r0zwKFFZNudXucNhHKFJg==
   dependencies:
     babel-runtime "^5.8.0"
     marker-clusterer-plus "^2.1.4"
