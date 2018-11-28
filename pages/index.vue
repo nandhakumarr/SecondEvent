@@ -14,6 +14,7 @@
   app-footer
   .back-to
     a(href="#", v-scroll-to="'.hero'")
+      img(src="/images/dropdown.png")
 </template>
 
 

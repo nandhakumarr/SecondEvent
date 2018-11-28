@@ -55,7 +55,7 @@ section.tickets
       flex-wrap: wrap
       position: relative
       padding: $space*4
-      @media (min-width: $breakpoint-mobile)
+      @media (max-width: $breakpoint-mobile)
         justify-content: center
       .pricing-item
         position: relative
