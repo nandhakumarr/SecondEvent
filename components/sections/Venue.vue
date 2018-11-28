@@ -55,6 +55,7 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
 section.venue
+  background: $white
   .container
     padding: $space*5
     header
