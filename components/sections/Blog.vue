@@ -5,7 +5,7 @@ section.blog
       span INFO UPDATE
       h2 Latest News
     main
-      .card(v-for="(blog, i) in blogs", key="i")
+      .card(v-for="(blog, i) in blogs", :key="i")
         .blog
           .blog-image
             img(:src="blog.img")

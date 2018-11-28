@@ -6,7 +6,7 @@ section.tickets
       h2 Get your Ticket
     img.pricing-img(src="/images/pricing-memphis1.png")
     main
-      .pricing-item(v-for="(t, i) in data" key="i")
+      .pricing-item(v-for="(t, i) in data" :key="i")
         img.dot(src="/images/dot.png")
         .pricing-box
           .pricing-header

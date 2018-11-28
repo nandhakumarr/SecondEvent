@@ -3,7 +3,7 @@ section.about
   .container
     .intro
       .text
-        .intro-text(v-for="(a, i) in about.about1", key="i")
+        .intro-text(v-for="(a, i) in about.about1", :key="i")
           h3 {{ a.title }}
           p {{ a.description }}
           span {{ a.counterNumber }}
@@ -11,7 +11,7 @@ section.about
         .intro-video
           img(src="/images/video-img.jpg")
       .text
-        .intro-text(v-for="(a, j) in about.about2", key="j")
+        .intro-text(v-for="(a, j) in about.about2", :key="j")
           h3 {{ a.title }}
           p {{ a.description }}
           span {{ a.counterNumber }}

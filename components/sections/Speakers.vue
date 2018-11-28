@@ -5,7 +5,7 @@ section.speakers
       span Listen to The
       h2 Event Speakers
     main
-      .speakers-list(v-for="(s, i) in data", key="i" @click="select(i)" :class="[{ 'selected': selected === i }]")
+      .speakers-list(v-for="(s, i) in data", :key="i" @click="select(i)" :class="[{ 'selected': selected === i }]")
         .speaker-img
           img(:src="s.image")
         .speaker-info
