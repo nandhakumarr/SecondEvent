@@ -53,7 +53,6 @@ section.app-header
   .container
     @include fixed-n
     @include flex
-    top: $space*-1.2
     background: transparent
     navigationd
       a.btn.btn-primary
@@ -84,12 +83,12 @@ section.app-header
 //Sticky
 .app-header.dark
   background: rgba(26, 24, 49, 0.95)
-  z-index: 99
+  z-index: 1000
   transition: background-color 0.35s
   @include fixed-n
   width: 100%
   height: auto
-  padding: $space*2.7 0
+  padding: $space*3.2 0
 
 section.app-header
   .container

@@ -5,7 +5,7 @@ nav.navigator(:class="{open: open}")
       a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
       span(v-if="item.children") :::
       ul.dropdown-content(v-if="item.children")
-        li(v-for="child, i in item.children", :key="i") 
+        li(v-for="child, i in item.children", :key="i")
           nuxt-link(:to="child.url") {{ child.label }}
     li
       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
