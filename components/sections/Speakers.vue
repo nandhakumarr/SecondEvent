@@ -80,6 +80,8 @@ section.speakers
       text-align: center
       @include flex
       // padding: $space
+      @media (max-width: $breakpoint-mobile)
+        justify-content: center
       flex-wrap: wrap
       .speakers-list
         margin: $space

@@ -121,6 +121,10 @@ section.agenda
             opacity: 0.5
             z-index: 1
             transition: all 0.4s ease
+            // @media (max-width: $breakpoint-mobile)
+            //   width: $day-size/1.5
+            //   height: $day-size/1.5
+              
             @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
               position: static
               margin: 0 1rem
@@ -197,6 +201,8 @@ section.agenda
         display: block
         width: 100%
         height: 15rem
+      @media (max-width: $breakpoint-mobile)
+        height: 20rem
       @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
         height: 13rem
         width: 50%
