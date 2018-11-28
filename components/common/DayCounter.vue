@@ -1,35 +1,59 @@
 <template lang="pug">
 .day-counter
-  .countdown
+  .countdown(v-if="timespan")
     .block
       .days
-        p 329
+        p {{ timespan.days }}
         p.label Days
     .block
       .hours
-        p 02
+        p {{ timespan.hours }}
         p.label Hours
     .block
       .minutes
-        p 41
+        p {{ timespan.minutes }}
         p.label Minutes
     .block
       .seconds
-        p 30
+        p {{ timespan.seconds }}
         p.label Seconds
 </template>
 
 <script>
-// import moment from 'moment'
-// import countdown from 'countdown'
-// require('moment-countdown')
+import countdown from 'countdown'
 
 export default {
+  props: {
+   eventDate: {
+     type: Date,
+     default: new Date()
+   } 
+  },
+  data () {
+    return {
+      timespan: null
+    }
+  },
+  methods: {
+    countdown () {
+      this.timespan =  countdown(
+        this.eventDate, 
+        null, 
+        countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS
+      )
+    }
+  },
+  mounted () {
+    setInterval(this.countdown, 1000)
+  }
 }
 </script>
 
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
+
+$metric-size: 7rem
+
 .day-counter
   .countdown
     @include flex
@@ -40,6 +64,9 @@ export default {
     .block
       margin: $space
       text-align: center
+      .days, .hours, .minutes, .seconds
+        width: $metric-size
+        height: $metric-size
       .days
         border: 3px solid $days
         border-radius: 50%

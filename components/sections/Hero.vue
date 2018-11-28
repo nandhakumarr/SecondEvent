@@ -5,7 +5,7 @@ section.hero
       p 5 to 7 June 2019, Waterfront Hotel, London
       h1 Digital Thinkers MeetUp
       .timer
-      day-counter
+      day-counter(:event-date="eventDate")
       .cta
         a.btn Buy Ticket
     .banner-img
@@ -15,6 +15,11 @@ section.hero
 <script>
 import DayCounter from '~/components/common/DayCounter'
 export default {
+  data () {
+    return {
+      eventDate: new Date('2019-Jan-04 18:30:00')
+    }
+  },
   components: {
     DayCounter
   }
