@@ -201,7 +201,7 @@ section.agenda
         display: block
         width: 100%
         height: 15rem
-      @media (max-width: $breakpoint-mobile)
+      @media (min-width: $breakpoint-mobile)
         height: 20rem
       @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
         height: 13rem
