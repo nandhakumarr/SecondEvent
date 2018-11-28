@@ -8,7 +8,7 @@ section.app-footer
       .section-form
         input(id="mail"  type="text" placeholder="Your Email")
         button.btn Subscribe
-    .footer  
+    .footer
       .social-media
         ul
           li
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/styles/includes' 
+@import 'assets/styles/includes'
 section.app-footer
   background: #1a1831
   position: relative
@@ -50,9 +50,8 @@ section.app-footer
       background-repeat: no-repeat
       background-size: cover
       height: 20rem
-      width: 90%
+      max-width: $page-width
       margin: 0 auto
-      padding: $space*2 0
       margin-top: $space
       z-index: 1
       @include absolute
@@ -75,17 +74,21 @@ section.app-footer
         margin: $space
         color: $white
         input
-          width: 100%
+          background: transparent
           border: none
-          margin: 0 auto
           border-bottom: 1px solid #6f55b0
-          background: none
-          padding: 1rem
+          border-radius: 0
+          -webkit-border-radius: 0
+          -ms-border-radius: 0
+          font-size: 14px
+          line-height: 40px
+          padding: 0
+          color: #fff
           #mail
             color: $white
         .btn
           @media (max-width: $breakpoint-tab-1)
-            padding: 0 $space    
+            padding: 0 $space
     .footer
       padding-top: $space*10
       .social-media, .footer-menu
