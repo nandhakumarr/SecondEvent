@@ -68,7 +68,7 @@ section.speakers
   min-height: 100vh
   padding-bottom: $space*4
   position: relative
-  
+
   .container
     header
       position: relative
@@ -88,14 +88,40 @@ section.speakers
       .speakers-list
         margin: $space
         &:hover
+          .speaker-info
+            color: $event-pink !important
           .speaker-img
+            &:before
+              position: absolute
+              left: 0
+              top: 0
+              width: 100%
+              height: 100%
+              content: ''
+              background: rgba(59, 29, 130, 0.5)
+              transition: all 0.4s ease
+              opacity: 1
+              z-index: 1
+              cursor: pointer
             img
               transform: scale(1.2)
-              transition: all 0.5s ease
-              filter: grayscale(60%)
+              transition: all 0.6s ease
             .plus-image
-              height: 60%
-              opacity: 1     
+              opacity: 1
+              position: absolute
+              top: 50%
+              left: 37%
+              z-index: 10
+              color: #fff
+              font-size: 22px
+              width: 50px
+              height: 50px
+              margin: auto
+              // padding: 12px 0
+              // border: 1spx solid #ddd
+              transform: translateY(-50%)
+              border-radius: 50%
+              cursor: pointer
         .speaker-img
           border-radius: 50%
           width: 15rem
@@ -106,15 +132,16 @@ section.speakers
           img
             width: 100%
           .plus-image
-            @include absolute-s
             opacity: 0
-            width: 4rem
-            height: 0
-            transition: .6s ease
+            img
+              color: $white
         .speaker-info
           p
             color: $neutral-light
-      
+          h3
+            &:hover
+              color: $event-pink
+              cursor: pointer
 //Extras Images
 .memphis1
   @include absolute-nw
@@ -144,7 +171,7 @@ section.speakers
 @import 'assets/styles/includes'
 section.speakers
   .speakers-list
-    position: relative 
+    position: relative
   .speaker-modal
     @include fixed
     @include flex
@@ -160,15 +187,15 @@ section.speakers
       align-items: flex-start
       text-align: left
       @media (max-width: $breakpoint-tab-3)
-        display: block    
+        display: block
       .mspeaker-info
         padding: $space*3
       p
-        color: $neutral-light    
+        color: $neutral-light
       h4, span
-        color: $black  
-      p, h4, h3, 
-        padding-bottom: $space 
+        color: $black
+      p, h4, h3,
+        padding-bottom: $space
       .sessions
         @include flex
         justify-content: flex-start
@@ -176,21 +203,21 @@ section.speakers
           h4
             padding: 0rem
         p
-          color: #e7015e  
+          color: #e7015e
         span
-          color: $neutral-light    
-          font-weight: bold  
+          color: $neutral-light
+          font-weight: bold
         .day2
           margin-left: $space*3
 
     button
-      border: none     
+      border: none
       padding: $space
       cursor: pointer
       background: none
       img
         width: $space*1.5
-    
+
 </style>
 
 

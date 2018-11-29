@@ -1,12 +1,12 @@
 <template lang="pug">
 nav.navigator(:class="{open: open}")
   ul.primary
-    li(v-for="item, i in navigation.primary" :key="i" @click="select(i)" :class="[{'selected': isSelected === i}]")
+    li(v-for="item, i in navigation.primary", :key="i" @click="select(i)" :class="[{'selected': isSelected === i}]")
       span
         a(href="#", v-scroll-to="item.scroll_to") {{ item.label }}
         img(v-if="item.children", src="/images/dropdown.png")
       ul.dropdown-content(v-if="isSelected(i)")
-        li(v-for="child, i in item.children", :key="i") 
+        li(v-for="child, i in item.children", :key="i")
           nuxt-link(:to="child.url") {{ child.label }}
     li
       a.btn.btn-primary(href="#", v-scroll-to="'.tickets'") Buy Ticket
@@ -56,8 +56,8 @@ export default {
   .primary
     li span
       @include spread
-      a 
-        img 
+      a
+        img
           color: white
 .navigator
   a
@@ -70,13 +70,13 @@ export default {
   &.open
     display: block
     @include fixed-sw
-    top: 4rem
+    top: 6rem
     left: 3rem
     rigth: 3rem
     width: 90%
     // margin: 0 auto
-    ul.primary  
-      flex-direction: column  
+    ul.primary
+      flex-direction: column
       li
         width: 100%
         padding: $space/2
@@ -84,8 +84,8 @@ export default {
         a.btn.btn-primary
           width: 90%
 
-          
-          
+
+
 
 
 

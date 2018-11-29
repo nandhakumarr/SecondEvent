@@ -74,8 +74,8 @@ section.agenda
           max-width: 100%
           margin-bottom: 3rem
         h2
-          margin-bottom: $space*2
-          margin-top: $space*2
+          // margin-bottom: $space*2
+          // margin-top: $space*2
           @media (max-width: $breakpoint-tab-4)
             margin-bottom: $space
           &:after
@@ -124,7 +124,7 @@ section.agenda
             // @media (max-width: $breakpoint-mobile)
             //   width: $day-size/1.5
             //   height: $day-size/1.5
-              
+
             @media (min-width: $breakpoint-tab-portrait) and (max-width: $breakpoint-tab-4)
               position: static
               margin: 0 1rem

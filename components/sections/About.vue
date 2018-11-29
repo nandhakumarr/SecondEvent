@@ -10,6 +10,8 @@ section.about
       .video
         .intro-video
           img(src="/images/video-img.jpg")
+          //- a(href="https://www.youtube.com/watch?v=Bey4XXJAqS8", @click="open()")
+          //-   img(src="/images/video-play.png")
       .text
         .intro-text(v-for="(a, j) in about.about2", :key="j")
           h3 {{ a.title }}
@@ -23,7 +25,16 @@ export default {
 
   data () {
     return {
-      about: data
+      about: data,
+      open: false
+    }
+  },
+  methods: {
+    open () {
+      this.open = !this.open
+    },
+    hide () {
+      this.open = false
     }
   }
 
@@ -96,6 +107,9 @@ section.about
             content: ''
             width: 100%
             height: 100%
+          a
+            @include absolute
+            top: 50%
 </style>
 
 <style lang="sass" scoped>

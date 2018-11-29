@@ -33,7 +33,7 @@ section.hero
   background-repeat: no-repeat
   background-size: cover
   color: $white
-  padding-top: $space*7
+  padding-top: $space*9
   height: 800px
   overflow: hidden
   .container

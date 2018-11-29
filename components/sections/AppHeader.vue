@@ -3,8 +3,9 @@ section.app-header(:class="{dark: isScroll, open: open}")
   .container
     a.logo
       img(src="/images/logo.png")
-    a.hamburger(@click="toggle()")
-      img(src="/images/menu.png")
+    button
+      a.hamburger(@click="toggle()")
+        img(src="/images/menu.png")
     NavigationD.desktop(:open="open")
     NavigationM.mobile(:open="open")
 
@@ -68,10 +69,20 @@ section.app-header
       &.open
         display: block
 
-
-    a.hamburger
-      margin-right: $space*2
-      @incliude fixed
+    button
+      @media (max-width: $breakpoint-tab-2)
+        background: $event-red
+        color: $white
+        border: 1px solid $event-red
+        padding: $space
+        border-radius: 2px
+        cursor: pointer
+        transition: all 0.6s ease
+        a.hamburger
+          // margin-right: $space*2
+          @incliude fixed
+          img
+            width: 1rem
       @media (min-width: $breakpoint-tab-5)
         display: none
 
@@ -89,7 +100,8 @@ section.app-header
   width: 100%
   height: auto
   padding: $space*3.2 0
-
+  @media (max-width: $breakpoint-tab-5)
+    padding: $space*3 0
 section.app-header
   .container
     overflow: visible
