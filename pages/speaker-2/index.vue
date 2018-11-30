@@ -1,12 +1,10 @@
 <template lang="pug">
 .page
-  .container
-    app-header
-    .banner-content
-      h2 SPEAKERS II
-      p Exibit / Speakers II
-    book-seat
-    app-footer
+  app-header
+  key-speakers
+  speakers
+  book-seat
+  app-footer
   
 
 </template>
@@ -14,27 +12,18 @@
 import AppHeader from '~/components/sections/app-header/AppHeader.vue'
 import AppFooter from '~/components/sections/app-footer/AppFooter.vue'
 import BookSeat from '~/components/sections/book-seat/BookSeat.vue'
+import Speakers from '~/components/sections/speakers/Speakers.vue'
+import KeySpeakers from '~/components/sections/speakers/KeySpeakers.vue'
+
 export default {
   components: {
     AppHeader,
     BookSeat,
-    AppFooter
+    AppFooter,
+    Speakers,
+    KeySpeakers
   }
 }
 </script>
 <style lang="sass" scoped>
-@import 'assets/styles/includes'
-.container
-  .banner-content
-    background-image: url(/images/banner-bg.jpg)
-    background-repeat: no-repeat
-    background-size: cover
-    height: 400px
-    overflow: hidden
-    h2, p
-      text-align: center
-      color: $white
-    h2
-      margin-top: 10rem
-
 </style>

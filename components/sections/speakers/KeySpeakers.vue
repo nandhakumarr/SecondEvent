@@ -12,14 +12,10 @@ section.speakers
         :key="i" 
         :class="[{ 'selected': selected === i }]")
       speaker-modal(v-if="selected", :speaker="selected", @close="deselect")
-
-    img.memphis1(src="/images/home-speaker-memphis1.png")
-    img.memphis2(src="/images/home-speaker-memphis2.png")
-    img.memphis3(src="/images/home-speaker-memphis3.png")
 </template>
 
 <script>
-import speaker from 'static/seed/speakers'
+import speaker from 'static/seed/keyspeakers'
 import SpeakerCircle from '~/components/widgets/SpeakerCircle'
 import SpeakerSquare from '~/components/widgets/SpeakerSquare'
 import SpeakerModal from '~/components/widgets/SpeakerModal'
@@ -78,7 +74,7 @@ section.speakers
       @include flex
       // padding: $space
       @media (min-width: $breakpoint-mobile)
-        justify-content: center
+        justify-content: space-around
       flex-wrap: wrap
 
 //Extras Images

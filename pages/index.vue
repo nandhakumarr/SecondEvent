@@ -3,8 +3,8 @@
   app-header
   hero
   about
-  speakers
-  
+  speakers(card="speaker-circle")
+  speakers(card="speaker-square")
   split-section
   agenda
   tickets
