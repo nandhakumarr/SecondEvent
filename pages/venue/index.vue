@@ -2,6 +2,7 @@
 .page
   app-header
   page-hero
+  venue-facilities
   venue
   book-seat
   app-footer
@@ -13,6 +14,7 @@ import AppHeader from '~/components/sections/app-header/AppHeader.vue'
 import AppFooter from '~/components/sections/app-footer/AppFooter.vue'
 import BookSeat from '~/components/sections/book-seat/BookSeat.vue'
 import Venue from '~/components/sections/venue/Venue.vue'
+import VenueFacilities from '~/components/sections/venue/VenueFacilities.vue'
 import PageHero from '~/components/PageHero/PageHero.vue'
 export default {
   components: {
@@ -20,7 +22,8 @@ export default {
     BookSeat,
     AppFooter,
     PageHero,
-    Venue
+    Venue,
+    VenueFacilities
   }
 }
 </script>

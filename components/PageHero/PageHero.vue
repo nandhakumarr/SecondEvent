@@ -1,13 +1,27 @@
 <template lang="pug">
 section.page-hero
   .container
-
-    p Exibit/ About
+    h1 {{ pageTitle }}
+    p {{ pageSubTitle }}
 
 </template>
 <script>
 export default {
-  
+  props: {
+    pageTitle: {
+      type: String,
+      default: "Enna page open pannalum andha text varanum"
+    },
+    pageSubTitle: {
+      type: String,
+      default: "Inga Subtitle varanum"
+    }
+  },
+  computed: {
+    hasTitle () {
+      return this.pageTitle.length > 10 ? 'Yay!' : 'Nay :('
+    }
+  }
 }
 </script>
 <style lang="sass" scoped>
@@ -17,9 +31,9 @@ section.page-hero
   background-repeat: no-repeat
   background-size: cover
   color: $white
-  padding-top: $space*9
   height: 400px
   overflow: hidden
+  @include flex
   .container
     text-align: center
 

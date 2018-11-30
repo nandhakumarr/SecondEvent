@@ -8,9 +8,9 @@ section.speakers
       component(v-for="(s, i) in data", 
         :is="card"
         :speaker="s"
-        @click.native="select(i)"
+        @click.native="select(s)"
         :key="i" 
-        :class="[{ 'selected': selected === i }]")
+        :class="[{ 'selected': selected === s }]")
       speaker-modal(v-if="selected", :speaker="selected", @close="deselect")
 
     img.memphis1(src="/images/home-speaker-memphis1.png")
@@ -38,9 +38,8 @@ export default {
     }
   },
   methods: {
-      select(i){
-        console.log(i, 'select speaker')
-        this.selected = this.data[i]
+      select(speaker){
+        this.selected = speaker
       },
       deselect() {
         this.selected = null

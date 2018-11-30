@@ -1,7 +1,7 @@
 <template lang="pug">
 .page
   app-header
-  page-hero
+  page-hero(pageTitle="Speaker 2", pageSubTitle="Exhibit/ Speaker 2")
   key-speakers
   speakers
   book-seat
