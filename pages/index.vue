@@ -4,6 +4,7 @@
   hero
   about
   speakers
+  speakers-square
   split-section
   agenda
   tickets
@@ -22,7 +23,8 @@
 
 import Hero from '~/components/sections/hero/Hero.vue'
 import About from '~/components/sections/about/About.vue'
-import Speakers from '~/components/sections/speaker/Speakers.vue'
+import Speakers from '~/components/sections/speakers/Speakers.vue'
+import SpeakersSquare from '~/components/sections/speakers/SpeakersSquare.vue'
 import SplitSection from '~/components/sections/split-section/SplitSection.vue'
 import Agenda from '~/components/sections/agenda/Agenda.vue'
 import Tickets from '~/components/sections/tickets/Tickets.vue'
@@ -45,7 +47,8 @@ components: {
     Venue,
     AppHeader,
     AppFooter,
-    BookSeat
+    BookSeat,
+    SpeakersSquare
   }
 }
 </script>
