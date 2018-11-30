@@ -14,8 +14,8 @@ section.app-header(:class="{dark: isScroll, open: open}")
 <script>
 import Vue from 'vue'
 import vueScrollTo from 'vue-scroll-to'
-import NavigationD from '~/components/sections/NavigationD.vue'
-import NavigationM from '~/components/sections/NavigationM.vue'
+import NavigationD from '~/components/sections/navigation/navigation-1/NavigationD.vue'
+import NavigationM from '~/components/sections/navigation/navigation-1/NavigationM.vue'
 Vue.use(vueScrollTo)
 export default {
   data () {

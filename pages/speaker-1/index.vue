@@ -11,9 +11,9 @@
 
 </template>
 <script>
-import AppHeader from '~/components/sections/AppHeader.vue'
-import AppFooter from '~/components/sections/AppFooter.vue'
-import BookSeat from '~/components/sections/bookSeat.vue'
+import AppHeader from '~/components/sections/app-header/AppHeader.vue'
+import AppFooter from '~/components/sections/app-footer/AppFooter.vue'
+import BookSeat from '~/components/sections/book-seat/BookSeat.vue'
 export default {
   components: {
     AppHeader,

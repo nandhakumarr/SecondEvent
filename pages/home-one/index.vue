@@ -4,7 +4,7 @@
   hero
   about
   speakers
-  spilt-section
+  split-section
   agenda
   tickets
   blog
@@ -20,24 +20,25 @@
 
 <script>
 
-import Hero from '~/components/sections/Hero.vue'
-import About from '~/components/sections/About.vue'
-import Speakers from '~/components/sections/Speakers.vue'
-import SpiltSection from '~/components/sections/SpiltSection.vue'
-import Agenda from '~/components/sections/Agenda.vue'
-import Tickets from '~/components/sections/Tickets.vue'
-import Blog from '~/components/sections/Blog.vue'
-import Sponsors from '~/components/sections/Sponsors.vue'
-import Venue from '~/components/sections/Venue.vue'
-import AppHeader from '~/components/sections/AppHeader.vue'
-import AppFooter from '~/components/sections/AppFooter.vue'
-import BookSeat from '~/components/sections/bookSeat.vue'
+import Hero from '~/components/sections/hero/Hero'
+import About from '~/components/sections/about/About'
+import Speakers from '~/components/sections/speakers/Speakers'
+import SplitSection from '~/components/sections/split-section/SplitSection'
+import Agenda from '~/components/sections/agenda/Agenda'
+import Tickets from '~/components/sections/tickets/Tickets'
+import Blog from '~/components/sections/blog/Blog'
+import Sponsors from '~/components/sections/sponsors/Sponsors'
+import Venue from '~/components/sections/venue/Venue'
+import AppHeader from '~/components/sections/app-header/AppHeader'
+import AppFooter from '~/components/sections/app-footer/AppFooter'
+import BookSeat from '~/components/sections/book-seat/BookSeat'
+
 export default {
   components: {
     Hero,
     About,
     Speakers,
-    SpiltSection,
+    SplitSection,
     Agenda,
     Tickets,
     Blog,
@@ -89,7 +90,7 @@ body {
   hero
   about
   speakers
-  spilt-section
+  split-section
   agenda
   tickets
   blog
@@ -105,24 +106,24 @@ body {
 
 <script>
 
-import Hero from '~/components/sections/Hero.vue'
-import About from '~/components/sections/About.vue'
-import Speakers from '~/components/sections/Speakers.vue'
-import SpiltSection from '~/components/sections/SpiltSection.vue'
-import Agenda from '~/components/sections/Agenda.vue'
-import Tickets from '~/components/sections/Tickets.vue'
-import Blog from '~/components/sections/Blog.vue'
-import Sponsors from '~/components/sections/Sponsors.vue'
-import Venue from '~/components/sections/Venue.vue'
-import AppHeader from '~/components/sections/AppHeader.vue'
-import AppFooter from '~/components/sections/AppFooter.vue'
-import BookSeat from '~/components/sections/bookSeat.vue'
+import Hero from '~/components/sections/hero/Hero'
+import About from '~/components/sections/about/About'
+import Speakers from '~/components/sections/speakers/Speakers'
+import SplitSection from '~/components/sections/split-section/SplitSection'
+import Agenda from '~/components/sections/agenda/Agenda'
+import Tickets from '~/components/sections/tickets/Tickets'
+import Blog from '~/components/sections/blog/Blog'
+import Sponsors from '~/components/sections/sponsors/Sponsors'
+import Venue from '~/components/sections/venue/Venue'
+import AppHeader from '~/components/sections/app-header/AppHeader'
+import AppFooter from '~/components/sections/app-footer/AppFooter'
+import BookSeat from '~/components/sections/book-seat/BookSeat'
 export default {
   components: {
     Hero,
     About,
     Speakers,
-    SpiltSection,
+    SplitSection,
     Agenda,
     Tickets,
     Blog,

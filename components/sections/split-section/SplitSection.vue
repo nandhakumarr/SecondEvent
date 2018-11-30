@@ -1,5 +1,5 @@
 <template lang="pug">
-section.spilt-section
+section.split-section
   .cta-image
   .cta-content
     .cta
@@ -16,7 +16,7 @@ export default {
 
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
-section.spilt-section
+section.split-section
   @include flex
   position: relative
   .cta-image, .cta-content
@@ -62,7 +62,7 @@ section.spilt-section
         font-size: 1rem
         letter-spacing: 1.4px
 
-section.spilt-section
+section.split-section
   @media (max-width: $breakpoint-desktop)
     display: block
     .cta-image, .cta-content
