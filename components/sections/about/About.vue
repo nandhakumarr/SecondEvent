@@ -30,7 +30,7 @@ export default {
     }
   },
   methods: {
-    open () {
+    show () {
       this.open = !this.open
     },
     hide () {
