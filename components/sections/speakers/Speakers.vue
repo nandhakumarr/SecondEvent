@@ -5,7 +5,8 @@ section.speakers
       span Listen to The
       h2 Event Speakers
     main
-      speaker-circle(v-for="(s, i) in data", 
+      component(v-for="(s, i) in data", 
+        :is="card"
         :speaker="s"
         @click.native="select(i)"
         :key="i" 
@@ -20,9 +21,16 @@ section.speakers
 <script>
 import speaker from 'static/seed/speakers'
 import SpeakerCircle from '~/components/widgets/SpeakerCircle'
+import SpeakerSquare from '~/components/widgets/SpeakerSquare'
 import SpeakerModal from '~/components/widgets/SpeakerModal'
 
 export default {
+  props: {
+    card: {
+      type: String,
+      default: "speaker-circle"
+    }
+  },
   data () {
     return {
       data: speaker,
@@ -40,6 +48,7 @@ export default {
   },
   components: {
     SpeakerCircle,
+    SpeakerSquare,
     SpeakerModal
   }
 }
