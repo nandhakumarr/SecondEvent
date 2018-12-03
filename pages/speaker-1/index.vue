@@ -1,12 +1,11 @@
 <template lang="pug">
 .page
-  app-header
   page-hero(pageTitle="Speaker 1", pageSubTitle="Exhibit/ Speaker 1")
   key-speakers(card="speaker-square")
   speakers(card="speaker-square")
   book-seat
   app-footer
-  
+
 </template>
 <script>
 import AppHeader from '~/components/sections/app-header/AppHeader.vue'

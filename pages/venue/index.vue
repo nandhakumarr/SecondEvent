@@ -1,12 +1,12 @@
 <template lang="pug">
 .page
   app-header
-  page-hero
+  page-hero(pageTitle="Event Venue", pageSubTitle="Exhibz / Venue")
   venue-facilities
   venue
   book-seat
   app-footer
-  
+
 
 </template>
 <script>

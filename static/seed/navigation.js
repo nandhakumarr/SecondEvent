@@ -53,6 +53,10 @@ export default {
         {
           label: "Venue",
           url: "/venue"
+        },
+        {
+          label: "Error",
+          url: "/error"
         }
       ]
     },
@@ -105,7 +109,7 @@ export default {
     {
       label: "Contact",
       scroll_to: ".contact",
-      
+
     },
   ]
 };

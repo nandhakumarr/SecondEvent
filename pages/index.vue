@@ -4,7 +4,7 @@
   hero
   about
   speakers(card="speaker-circle")
-  speakers(card="speaker-square")
+  //- speakers(card="speaker-square")
   split-section
   agenda
   tickets

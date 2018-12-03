@@ -36,5 +36,9 @@ section.page-hero
   @include flex
   .container
     text-align: center
+    h1
+      text-transform: uppercase
+      margin-bottom: $space/2
+      font-size: 3rem
 
 </style>

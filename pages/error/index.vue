@@ -1,6 +1,6 @@
 <template lang="pug">
 .page
-  page-hero(pageTitle="Event Sponsors", pageSubTitle="Exhibit/ Sponsors")
+  page-hero(pageTitle="Error Page", pageSubTitle="Exhibit/ Error")
 
 </template>
 <script>
