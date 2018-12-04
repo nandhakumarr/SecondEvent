@@ -4,19 +4,28 @@ section.faq
     .general-faqs
       header
         h2 General FAQ's
-      .faqs(v-for='item in faq' :class="{ active: isCurrent(item)}")
-        .ques 
-          a {{ item.ques }}
-          .image
-            img(src="https://img.icons8.com/metro/48/000000/expand-arrow.png" @click="select(item)")
-            img(src="https://img.icons8.com/metro/48/000000/expand-arrow.png" @click="select(item)")
+      .faqs(v-for='(item) in faq' :class="{ active: isCurrent(item)}")
+        .ques(@click="select(item)")
+          a {{ item.ques }}               
         .ans 
           p {{ item.ans }}  
     .enquiry-forms  
-      h2 Enquiry  
+      input(type="text" placeholder="Your Name")
+      input(type="text" placeholder="Your Email")
+      textarea(placeholder="Youy Question")
+      button.btn Send Question
+      .services
+        h3 Our Services
+        .images
+          img(src="https://img.icons8.com/ios/48/3498db/facebook-circled-filled.png")
+          img(src="https://img.icons8.com/ios/48/3498db/twitter-circled-filled.png")
+          img(src="https://img.icons8.com/color/48/3498db/google-plus.png")
+          img(src="https://img.icons8.com/ios/48/3498db/linkedin-circled-filled.png")
+          img(src="https://img.icons8.com/ios/48/e74c3c/instagram-new-filled.png")
 
 </template>
 <script>
+
 export default {
   data(){
     return{
@@ -55,23 +64,24 @@ export default {
 section.faq
   .container
     @include flex
+    align-items: flex-start
+    @media (max-width: $breakpoint-tab-4)
+      flex-direction: column
     .general-faqs
-      margin: 20px
-      width: 70%
+      width: 60%
+      @media (max-width: $breakpoint-tab-4)
+        width: 100%
       .faqs
         padding: $space
-        .ques
-          
-          border: 0.5px solid
+        .ques       
           display: block
+          border: 0.1px solid grey
           padding: $space
           font-weight: 800
           a
             color: $black
           img
             width: $space 
-            float: right
-
         .ans
           padding: $space
           display: none
@@ -83,6 +93,28 @@ section.faq
           border: none
         .ans
           display: block
+    .enquiry-forms
+      padding: $space         
+      width: 40%  
+      @media (max-width: $breakpoint-tab-4)
+        width: 100%
+      input, textarea
+        margin-bottom: $space
+        width: 100%
+        padding: $space 
+      .btn     
+        margin-left: 1rem
+    .services
+      margin-top: $space*1.5
+      padding: $space*2
+      background: #f8f8f8
+      width: 15rem
+      height: 8rem
+      @media (max-width: $breakpoint-tab-4)
+        display: none
+      .images
+        img
+          padding: $space/4
+          width: $space*2
 
-      
 </style>
