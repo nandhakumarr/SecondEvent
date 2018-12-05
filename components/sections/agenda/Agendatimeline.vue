@@ -1,30 +1,24 @@
 <template lang="pug">
 section.agenda
   .container
-    .head
-      header
-        span SCHEDULE DETAILS
-        h2 Event Schedules
+    header
+      span SCHEDULE DETAILS
+      h2 Event Schedules
       .schedule-date
         nav.days
-          a(@click="select(i)",v-for="(day, i) in data", :key="i", :class="[ 'day' + i, { 'selected': selected === i }]")
-            span.day {{ day.day }}
-            span.date {{ day.date }}
-
+          a(@click="select(i)",v-for="(day, i) in data", :key="i", :class="{'btn-primary': selected === i }")
+            h3.date {{ day.date }}
+            h6.day {{ day.day }}
     main
       .sessions(v-if="selected === i", v-for="(day, i) in data", :key="i")
         .session(v-for="(s, j) in day.session", :key="j")
-          .details
-            .session-speaker
-              img(v-if="s.image", :src="s.image")
-            .session-title
-              .time
-                h4 {{ s.start_time }} - {{ s.end_time }}
-                //- h6 {{ s.event }}
-              .data
-                h3(:class="s.class") {{ s.title }}
-                span(:class="s.class") {{ s.tag_name }}
-              p {{ s.content }}
+          .speaker-image(v-if="s.image")
+            img(v-if="s.image", :src="s.image")
+          .description
+            h4.time {{ s.start_time }} - {{ s.end_time }}
+            h3.title {{ s.title }}
+            span.tag {{ s.tag_name }}
+            p.content {{ s.content }}
     .cta
       a.btn more details
 </template>
@@ -50,56 +44,91 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/styles/includes'
 
+$br-split: $page-width
 section.agenda
   background: #FFF
   .container
-    .head
-      header
-        text-align: center
+    header
+      text-align: center
 
 section.agenda
   background: #FFF
   .container
-    .head
-      .schedule-date
-        text-align: center
-        nav.days
-          a 
-          span , span
-            color: black
+    .schedule-date
+      text-align: center
+      nav.days
+        @include flex
+        justify-content: center
+        position: relative
+        a
+          margin: $space
+          background: #f1f0f6
+          padding: $space $space*3.2
+          cursor: pointer
+          position: relative
+          &.btn-primary
+            background: $event-color
+            h6, h3
+              color: $white !important
+            &:before
+              border-style: solid
+              border-width: 0 15px 15px 0
+              border-color: transparent #e7015e transparent transparent
+              position: absolute
+              left: 0
+              bottom: -15px
+              content: ''
+              opacity: 1
+              transition: all 0.4s ease
+          h3, h6
+            color: #000 !important
+            font-weight: normal
+            margin: $space/2
+          h6
+            text-transform: uppercase
 
 
-section.agenda 
-  .container
-    main
-      .sessions
-        .details
-          @include flex-1
-          .session-speaker
-            img
-              margin-left: 1rem
-              width: 5rem 
-              border-radius: 50%
-          .session-title
-            padding: 2rem
-            .time
-              margin-bottom: 0.75rem
-              h4, h6
-                color: $event-red
-                font-size: 0.75rem
-            .data 
-              margin-bottom: 1rem
-              h3, span
-                color: black
-            p 
-              color: black
-              width: 35%
+//photo
+.session
+  .speaker-image
+    img
+      border-radius: 50%
+      width: 5rem
+      box-shadow: 19.799px 19.799px 40px 0px rgba(0, 0, 0, 0.1)
 
-h4.lunch, h3.lunch, span.lunch
-  display: none
+//description
+.session
+  .description
+    h4.time
+      color: $event-color !important
+      font-size: 14px
+      font-weight: normal
+    h3.title
+      font-weight: bold
+    .tag, .content
+      color: $neutral
 
-.details
-  &:nth-child(even)
-    
+//layout
+.sessions
+  // max-width: $br-split/2
+  .session
+    @include flex
+    align-items: flex-start
+    border-right: 1px solid $neutral
+    &:nth-child(even)
+      flex-direction: row-reverse
+      text-align: right
+      img
+        box-shadow: -19.799px 19.799px 40px 0px rgba(0, 0, 0, 0.1)
+    .description
+      flex: 1
+      padding: $space/2 $space
+      // max-width: 30rem
+
+//responsive
+
+.session
+  @media (max-width: $br-split)
+    max-width: $br-split/2
 </style>
 
